@@ -1,0 +1,19 @@
+
+# Dependencies
+/node_modules
+/package-lock.json
+/yarn.lock
+/pnpm-lock.yaml
+
+# Build output
+/dist
+/out
+/build
+/temp
+
+# IDEs and other
+/.idea
+/.vscode
+*.log
+.DS_Store
+

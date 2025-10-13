@@ -67,7 +67,7 @@ export default defineConfig({
   ],
   base,
   build: {
-    sourcemap: true,
+    sourcemap: false, // <-- 確保此處為 false
     outDir: 'out',
   },
   resolve: {

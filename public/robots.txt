@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.bicome.ccc/sitemap.xml
+Sitemap: https://www.bicome.cc/sitemap.xml

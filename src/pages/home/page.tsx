@@ -101,13 +101,23 @@ export default function Home() {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: data,
+        // 【修正點：將 URLSearchParams 轉換為字符串，提高數據傳輸穩定性】
+        body: data.toString(),
       });
 
       if (response.ok) {
-        alert('訊息已送出，我們會盡快回覆您！');
+        // 聯繫表單成功提交後，引導用戶加入社群
+        const lineLink = 'https://line.me/ti/g2/kvmqLQ35fXGFTqn4PtrWxFXvcka5klKmsJBUeA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default';
+
+        alert('訊息已送出，我們會盡快回覆您！\n\n🎯 立即加入 Bicome Line 社群，獲取最新用戶營運策略！');
+
+        if (confirm('您想立即加入 Bicome Line 社群嗎？ (將會開啟新視窗)')) {
+          window.open(lineLink, '_blank');
+        }
+
         (e.target as HTMLFormElement).reset();
       } else {
+        // 如果伺服器返回非 2xx 狀態碼，則顯示錯誤
         alert('送出失敗，請稍後再試');
       }
     } catch (error) {
@@ -155,10 +165,8 @@ export default function Home() {
                 <a href="#cases" className="text-slate-600 hover:text-slate-900 font-medium transition-all duration-300 cursor-pointer">成功案例</a>
                 <a href="#about" className="text-slate-600 hover:text-slate-900 font-medium transition-all duration-300 cursor-pointer">關於我們</a>
                 <button
-                    // 使用 'as HTMLElement' 向 TypeScript 保證該元素具備 click() 方法
-                    onClick={() =>
-                        (document.querySelector('#vapi-widget-floating-button') as HTMLElement)?.click()
-                    }
+                    // 【優化點 1: 導航欄按鈕 - 直接跳轉社群】
+                    onClick={() => handleSocialClick('line')}
                     className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 whitespace-nowrap cursor-pointer shadow-lg hover:shadow-xl"
                 >
                   免費諮詢
@@ -234,13 +242,11 @@ export default function Home() {
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <button
-                      // 使用 'as HTMLElement' 向 TypeScript 保證該元素具備 click() 方法
-                      onClick={() =>
-                          (document.querySelector('#vapi-widget-floating-button') as HTMLElement)?.click()
-                      }
+                      // 【優化點 2: Hero Section 按鈕 - 直接跳轉社群】
+                      onClick={() => handleSocialClick('line')}
                       className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 whitespace-nowrap cursor-pointer shadow-lg hover:shadow-xl"
                   >
-                    立即預約免費諮詢
+                    立即預約免費策略諮詢
                   </button>
 
                   <button
@@ -902,10 +908,8 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
 
                 <button
-                    // 使用 'as HTMLElement' 向 TypeScript 保證該元素具備 click() 方法
-                    onClick={() =>
-                        (document.querySelector('#vapi-widget-floating-button') as HTMLElement)?.click()
-                    }
+                    // 【優化點 3: Bottom CTA 按鈕 - 直接跳轉社群】
+                    onClick={() => handleSocialClick('line')}
                     className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-xl font-medium transition-all duration-300 whitespace-nowrap cursor-pointer shadow-lg hover:shadow-xl"
                 >
                   立即預約免費策略諮詢

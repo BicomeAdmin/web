@@ -40,17 +40,17 @@ export default function HeroCEO() {
                         {/* 主標題 */}
                         <div className="space-y-6">
                             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-black text-white leading-[1.05] tracking-tighter">
-                                <span className="block text-white/40 text-xl md:text-2xl lg:text-3xl font-bold mb-4 tracking-normal">數據驅動的品牌</span>
+                                <span className="block text-white/40 text-xl md:text-2xl lg:text-3xl font-bold mb-4 tracking-normal">數據驅動的私域營運方法論</span>
                                 <span className="bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-500 bg-clip-text text-transparent">
-                                    Social CRM
+                                    品牌KOC
                                 </span>
                                 <br />
-                                <span className="text-white">用戶營運專家</span>
+                                <span className="text-white">CLTV的增長引擎</span>
                             </h1>
 
                             <p className="text-lg md:text-xl text-white/50 leading-relaxed max-w-xl">
-                                圍繞 <span className="text-emerald-400 font-semibold">#社群私域流量</span> 與
-                                <span className="text-emerald-400 font-semibold"> #客戶關係管理</span>，
+                                圍繞 <span className="text-emerald-400 font-semibold">#社群私域營運</span> 與
+                                <span className="text-emerald-400 font-semibold"> #社群私域數據</span>，
                                 協助品牌執行用戶關係構建，並孵化品牌 <span className="text-white font-bold">KOC</span>。
                             </p>
                         </div>

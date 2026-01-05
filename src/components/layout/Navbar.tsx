@@ -35,7 +35,7 @@ export default function Navbar() {
                                 免費諮詢
                             </button>
                             <button className="bg-highlight text-white px-6 py-2.5 rounded-full text-sm font-black hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(225,0,126,0.3)]">
-                                用戶忠誠訂閱
+                                用戶忠誠系統
                             </button>
                         </div>
                     </div>

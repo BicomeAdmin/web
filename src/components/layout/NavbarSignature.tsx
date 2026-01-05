@@ -39,7 +39,7 @@ export default function NavbarSignature() {
                     {/* Right Actions */}
                     <div className="hidden md:flex items-center gap-4">
                         <button className="px-4 py-2 bg-amber-500 text-white text-sm font-bold rounded-lg hover:bg-amber-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(245,158,11,0.4)]">
-                            用戶忠誠訂閱
+                            用戶忠誠系統
                         </button>
                         <Link
                             to="/contact"
@@ -80,7 +80,7 @@ export default function NavbarSignature() {
                             ))}
                             <div className="flex flex-col gap-2 mt-4">
                                 <button className="w-full px-4 py-3 bg-amber-500 text-white font-bold rounded-lg hover:bg-amber-400 transition-colors">
-                                    用戶忠誠訂閱
+                                    用戶忠誠系統
                                 </button>
                                 <Link
                                     to="/contact"

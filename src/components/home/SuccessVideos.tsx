@@ -6,8 +6,8 @@ export default function SuccessVideos() {
 
     const videos = [
         {
-            src: "/videos/直分多精.mp4",
-            title: "直分多精",
+            src: "/videos/山納百景.mp4",
+            title: "#山納百景 關係經營的重要性",
             creator: "paul_bicome",
             views: "12.3K",
             likes: "1.2K",
@@ -183,7 +183,7 @@ export default function SuccessVideos() {
                                     加入 LINE 社群
                                 </h3>
                                 <p className="text-sm text-white/80">
-                                    Bicome，您的私域顧問 · 與 500+ 品牌主交流
+                                    Bicome，您的私域顧問 · 與 500+ 品牌主以及行銷與營運專家交流
                                 </p>
                             </div>
                         </div>

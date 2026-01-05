@@ -11,7 +11,7 @@ export default function Footer() {
         ],
         resources: [
             { label: "私域流量 (專書)", href: "https://www.books.com.tw/products/0011028729?srsltid=AfmBOopd4JlZ0XGQD6WuqnxqTTB-q0JbTNQsXKgmZ9mu1EPXCKnYFhnH" },
-            { label: "用戶忠誠計劃", href: "#" },
+            { label: "用戶忠誠系統", href: "#" },
         ],
     };
 

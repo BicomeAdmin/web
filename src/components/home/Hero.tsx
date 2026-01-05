@@ -28,13 +28,13 @@ export default function Hero() {
                             </div>
 
                             <h1 className="text-7xl lg:text-8xl font-black text-white leading-[0.9] tracking-tighter">
-                                數據驅動的品牌<br />
+                                數據驅動的私域營運方法論<br />
                                 <span className="text-accent underline decoration-highlight decoration-4 underline-offset-8">Social CRM</span>
                                 <span className="text-white/40 block mt-4 text-4xl lg:text-5xl font-medium tracking-normal">用戶營運專家</span>
                             </h1>
 
                             <p className="text-xl text-white/50 max-w-xl font-medium leading-relaxed">
-                                圍繞 <span className="text-white font-bold">#社群私域流量</span> 與 <span className="text-white font-bold">#客戶關係管理</span>，<br />
+                                圍繞 <span className="text-white font-bold">#社群私域營運</span> 與 <span className="text-white font-bold">#社群私域數據</span>，<br />
                                 協助品牌執行用戶關係構建，並孵化品牌 KOC。
                             </p>
                         </div>

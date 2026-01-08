@@ -8,7 +8,7 @@ export default function ContactPage() {
             role: "創辦人暨執行長",
             description: "深耕用戶營運領域超過 10 年，曾協助超過 200 個品牌打造私域生態系。專精於品牌策略規劃與商業模式創新。",
             email: "paul@bicome.co",
-            lineId: "paul_bicome",
+            lineId: "0988726087",
             phone: "0988-726-087",
             avatar: "👨‍💼",
             gradient: "from-purple-600 to-indigo-600"
@@ -19,7 +19,7 @@ export default function ContactPage() {
             role: "執行長特別助理",
             description: "負責企業級客戶專案統籌與跨部門協調，確保每個專案都能順利推進並達成目標。",
             email: "jocelyn@bicome.co",
-            lineId: "jocelyn_assistant",
+            lineId: "achiu1119",
             phone: "0937-525-107",
             avatar: "👩‍💼",
             gradient: "from-pink-500 to-rose-500"
@@ -30,7 +30,7 @@ export default function ContactPage() {
             role: "Business Development Director",
             description: "專注於品牌私域策略諮詢，擅長分析 brand 痛點並提供客製化解決方案。已成功協助 50+ 品牌建立私域營運體系。",
             email: "judy@bicome.co",
-            lineId: "judy_consultant",
+            lineId: "judyyyyyy",
             phone: "0988-983-660",
             avatar: "👩‍💻",
             gradient: "from-emerald-500 to-teal-500"
@@ -41,7 +41,7 @@ export default function ContactPage() {
             role: "Business Development Director",
             description: "具備豐富的社群經營與用戶增長經驗，專精於遊戲化營運策略設計與 KOC 孵化計畫。",
             email: "claire@bicome.co",
-            lineId: "claire_bd",
+            lineId: "yohoyayoyoho",
             phone: "0983-241-275",
             avatar: "👩‍🎨",
             gradient: "from-amber-500 to-orange-500"

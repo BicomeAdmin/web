@@ -34,17 +34,6 @@ export default function ContactPage() {
             phone: "0988-983-660",
             avatar: "👩‍💻",
             gradient: "from-emerald-500 to-teal-500"
-        },
-        {
-            name: "Claire",
-            title: "私域業務總監",
-            role: "Business Development Director",
-            description: "具備豐富的社群經營與用戶增長經驗，專精於遊戲化營運策略設計與 KOC 孵化計畫。",
-            email: "claire@bicome.co",
-            lineId: "yohoyayoyoho",
-            phone: "0983-241-275",
-            avatar: "👩‍🎨",
-            gradient: "from-amber-500 to-orange-500"
         }
     ];
 
@@ -97,7 +86,7 @@ export default function ContactPage() {
 
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
                         {teamMembers.map((member) => (
                             <div
                                 key={member.name}

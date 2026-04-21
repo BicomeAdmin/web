@@ -1,17 +1,16 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 export default function IndustryMatrix() {
     const [activeCategory, setActiveCategory] = useState('精選');
 
     const categories = [
-        { id: '精選', label: '精選案例', icon: '⭐' },
-        { id: '食', label: '餐飲美食', icon: '🍜' },
-        { id: '衣', label: '時尚服飾', icon: '👗' },
-        { id: '住', label: '居家房產', icon: '🏠' },
-        { id: '育', label: '教育培訓', icon: '📚' },
-        { id: '樂', label: '休閒娛樂', icon: '🎮' },
-        { id: '生', label: '生活風格', icon: '✨' },
+        { id: '精選', label: '精選案例', icon: 'ri-star-smile-line' },
+        { id: '食', label: '餐飲美食', icon: 'ri-restaurant-2-line' },
+        { id: '衣', label: '時尚服飾', icon: 'ri-t-shirt-line' },
+        { id: '住', label: '居家房產', icon: 'ri-home-4-line' },
+        { id: '育', label: '教育培訓', icon: 'ri-book-open-line' },
+        { id: '樂', label: '休閒娛樂', icon: 'ri-gamepad-line' },
+        { id: '生', label: '生活風格', icon: 'ri-leaf-line' },
     ];
 
     const cases = [
@@ -212,7 +211,7 @@ export default function IndustryMatrix() {
                                 : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-300 hover:bg-gray-50'
                                 }`}
                         >
-                            <span>{cat.icon}</span>
+                            <i className={`${cat.icon} text-lg`} aria-hidden="true"></i>
                             <span>{cat.label}</span>
                         </button>
                     ))}
@@ -294,13 +293,13 @@ export default function IndustryMatrix() {
                 {/* 底部 CTA */}
                 <div className="text-center mt-16">
                     <p className="text-gray-500 mb-4">想為您的品牌建立這樣的社群嗎？</p>
-                    <Link
-                        to="/contact"
+                    <a
+                        href="#team"
                         className="group relative inline-block px-8 py-4 bg-gray-900 text-white font-bold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl"
                     >
                         <span className="relative z-10">免費諮詢專屬方案</span>
                         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-emerald-500 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
-                    </Link>
+                    </a>
                 </div>
             </div>
         </section >

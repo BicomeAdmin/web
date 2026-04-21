@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom';
-
 export default function BicomeCloudFX() {
     const coreFeatures = [
-        { icon: "🎮", name: "遊戲化", color: "from-purple-500 to-violet-600" },
-        { icon: "🎯", name: "任務", color: "from-pink-500 to-rose-600" },
-        { icon: "🎁", name: "獎勵", color: "from-amber-500 to-orange-600" },
-        { icon: "🏅", name: "勳章", color: "from-emerald-500 to-teal-600" },
-        { icon: "🏆", name: "排行榜", color: "from-blue-500 to-cyan-600" },
+        { icon: "ri-gamepad-line", name: "遊戲化", color: "from-purple-500 to-violet-600" },
+        { icon: "ri-target-line", name: "任務", color: "from-pink-500 to-rose-600" },
+        { icon: "ri-gift-line", name: "獎勵", color: "from-amber-500 to-orange-600" },
+        { icon: "ri-medal-line", name: "勳章", color: "from-emerald-500 to-teal-600" },
+        { icon: "ri-trophy-line", name: "排行榜", color: "from-blue-500 to-cyan-600" },
     ];
+
+    const levelIcons = ["ri-leaf-line", "ri-star-line", "ri-vip-diamond-line", "ri-vip-crown-line", "ri-fire-line"];
 
     return (
         <section className="py-20 bg-gradient-to-br from-[#0a0a1a] via-[#1a0a2e] to-[#0a1a2e] text-white overflow-hidden relative">
@@ -31,10 +31,10 @@ export default function BicomeCloudFX() {
                     {coreFeatures.map((feature, index) => (
                         <div
                             key={index}
-                            className="flex flex-col items-center p-4 rounded-xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-all hover:-translate-y-1"
+                            className="flex flex-col items-center p-4 rounded-xl bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors"
                         >
-                            <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center text-xl mb-2 shadow-lg`}>
-                                {feature.icon}
+                            <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-2 shadow-lg`}>
+                                <i className={`${feature.icon} text-xl text-white`} aria-hidden="true"></i>
                             </div>
                             <div className="text-sm font-bold">{feature.name}</div>
                         </div>
@@ -46,7 +46,9 @@ export default function BicomeCloudFX() {
                     {/* 等級進度 */}
                     <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-5">
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-xl shadow-lg">💎</div>
+                            <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg">
+                                <i className="ri-vip-diamond-line text-xl text-white" aria-hidden="true"></i>
+                            </div>
                             <div className="flex-1">
                                 <div className="text-xs text-white/50">目前等級</div>
                                 <div className="text-lg font-bold">VIP 會員</div>
@@ -60,9 +62,9 @@ export default function BicomeCloudFX() {
                             <div className="h-full w-3/4 bg-gradient-to-r from-purple-500 via-pink-500 to-amber-500 rounded-full" />
                         </div>
                         <div className="flex justify-between items-center">
-                            {['🌱', '⭐', '💎', '👑', '🔥'].map((icon, i) => (
-                                <div key={i} className={`w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-sm ${i > 2 ? 'opacity-40' : ''}`}>
-                                    {icon}
+                            {levelIcons.map((iconClass, i) => (
+                                <div key={i} className={`w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center ${i > 2 ? 'opacity-40' : ''}`}>
+                                    <i className={`${iconClass} text-sm text-white`} aria-hidden="true"></i>
                                 </div>
                             ))}
                         </div>
@@ -72,23 +74,23 @@ export default function BicomeCloudFX() {
                     <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-5">
                         <div className="flex items-center justify-between mb-4">
                             <div className="text-sm font-bold flex items-center gap-2">
-                                <span className="text-pink-400">🎯</span> 今日任務
+                                <i className="ri-target-line text-pink-400" aria-hidden="true"></i> 今日任務
                             </div>
                             <span className="text-xs text-white/40">2/3 完成</span>
                         </div>
                         <div className="space-y-2.5">
                             <div className="flex items-center gap-3 p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-                                <span className="text-emerald-400">✓</span>
+                                <i className="ri-check-line text-emerald-400" aria-hidden="true"></i>
                                 <span className="text-sm flex-1">每日簽到</span>
                                 <span className="text-xs text-emerald-400">+50 點</span>
                             </div>
                             <div className="flex items-center gap-3 p-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-                                <span className="text-emerald-400">✓</span>
+                                <i className="ri-check-line text-emerald-400" aria-hidden="true"></i>
                                 <span className="text-sm flex-1">分享貼文</span>
                                 <span className="text-xs text-emerald-400">+100 點</span>
                             </div>
                             <div className="flex items-center gap-3 p-2.5 rounded-lg bg-white/5 border border-white/10">
-                                <span className="text-white/30">○</span>
+                                <i className="ri-checkbox-blank-circle-line text-white/30" aria-hidden="true"></i>
                                 <span className="text-sm flex-1 text-white/60">完成首購</span>
                                 <span className="text-xs text-amber-400">+500 點</span>
                             </div>
@@ -98,24 +100,31 @@ export default function BicomeCloudFX() {
                     {/* 排行榜 */}
                     <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-5">
                         <div className="text-sm font-bold mb-4 flex items-center gap-2">
-                            <span className="text-blue-400">🏆</span> 本月排行榜
+                            <i className="ri-trophy-line text-blue-400" aria-hidden="true"></i> 本月排行榜
                         </div>
                         <div className="space-y-2">
                             {[
-                                { n: "王小明", p: "12,580", r: "👑", bg: "bg-amber-500/10 border-amber-500/20" },
-                                { n: "林美玲", p: "11,230", r: "🥈", bg: "" },
-                                { n: "陳大偉", p: "10,890", r: "🥉", bg: "" },
-                            ].map((u, i) => (
-                                <div key={i} className={`flex items-center gap-3 p-2.5 rounded-lg ${u.bg || 'bg-white/[0.02]'} ${u.bg ? 'border ' + u.bg.split(' ')[1] : ''}`}>
-                                    <span className="text-lg">{u.r}</span>
-                                    <span className="text-sm flex-1 font-medium">{u.n}</span>
-                                    <span className="text-xs text-white/50">{u.p} 點</span>
-                                </div>
-                            ))}
+                                { n: "王小明", p: "12,580", rank: 1 },
+                                { n: "林美玲", p: "11,230", rank: 2 },
+                                { n: "陳大偉", p: "10,890", rank: 3 },
+                            ].map((u) => {
+                                const rankStyle = {
+                                    1: { color: 'text-amber-400', bg: 'bg-amber-500/10 border-amber-500/20' },
+                                    2: { color: 'text-slate-300', bg: '' },
+                                    3: { color: 'text-orange-300', bg: '' },
+                                }[u.rank as 1 | 2 | 3];
+                                return (
+                                    <div key={u.n} className={`flex items-center gap-3 p-2.5 rounded-lg ${rankStyle.bg || 'bg-white/[0.02]'} ${rankStyle.bg ? 'border' : ''}`}>
+                                        <span className={`w-7 h-7 rounded-full flex items-center justify-center font-bold text-xs ${rankStyle.color} bg-white/5 border border-current/30`}>{u.rank}</span>
+                                        <span className="text-sm flex-1 font-medium">{u.n}</span>
+                                        <span className="text-xs text-white/50">{u.p} 點</span>
+                                    </div>
+                                );
+                            })}
                         </div>
                         <div className="mt-3 pt-3 border-t border-white/10">
                             <div className="flex items-center gap-3 p-2.5 rounded-lg bg-purple-500/10 border border-purple-500/20">
-                                <span className="text-lg">😊</span>
+                                <i className="ri-user-smile-line text-lg text-purple-400" aria-hidden="true"></i>
                                 <span className="text-sm flex-1 font-medium">我的排名</span>
                                 <span className="text-sm font-bold text-purple-400">#28</span>
                             </div>
@@ -142,12 +151,12 @@ export default function BicomeCloudFX() {
                         </div>
 
                     </div>
-                    <Link
-                        to="/contact"
-                        className="px-8 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 text-white font-bold rounded-xl hover:shadow-[0_0_40px_rgba(79,70,229,0.4)] transition-all text-center"
+                    <a
+                        href="#team"
+                        className="px-8 py-3 bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 text-white font-bold rounded-xl hover:shadow-[0_0_40px_rgba(79,70,229,0.4)] transition-shadow text-center"
                     >
                         免費諮詢用戶忠誠方案
-                    </Link>
+                    </a>
                 </div>
             </div>
         </section>

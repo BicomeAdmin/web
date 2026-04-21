@@ -17,31 +17,31 @@ export default function SignaturePage() {
             <NavbarSignature />
 
             <main>
-                {/* 1. CEO Signature Hero - The Anchor (深色) */}
+                {/* 1. Hero - Anchor (深色) */}
                 <HeroCEO />
 
-                {/* 2. Core services - Business Foundations */}
+                {/* 2. Core Services - 商業基礎 */}
                 <CoreServices />
 
-                {/* 3. Industry Matrix - The Credibility (亮色) */}
+                {/* 3. Industry Matrix - 社群信任證明（亮色） */}
                 <IndustryMatrix />
 
-                {/* 3. methodology - The Intelligence (漸層灰) */}
-                <MethodologyCEO />
-
-                {/* 4. Private Domain Framework - 三階段/四步驟/九宮格 */}
-                <PrivateDomainFramework />
-
-                {/* 4. Short Video influence - The Traffic (亮色) */}
-                <SuccessVideos />
-
-                {/* 5. Team & Culture - The Soul (漸層灰) */}
-                <CulturePillars />
-
-                {/* 6. Technological Authority (深色) */}
+                {/* 4. BicomeCloudFX - 技術與產品力（深色，節奏錨點） */}
                 <BicomeCloudFX />
 
-                {/* 7. Meet the Team / Contact CTA */}
+                {/* 5. Methodology - 方法論（亮色） */}
+                <MethodologyCEO />
+
+                {/* 6. Private Domain Framework - 三階段/四步驟（亮色） */}
+                <PrivateDomainFramework />
+
+                {/* 7. Success Videos - 操盤影片（亮色） */}
+                <SuccessVideos />
+
+                {/* 8. Culture Pillars - 企業文化（亮色） */}
+                <CulturePillars />
+
+                {/* 9. Team - 聯絡 CTA（深色） */}
                 <TeamSection />
             </main>
 

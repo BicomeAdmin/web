@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 export default function PrivateDomainFramework() {
     // 三階段數據
     const stages = [
@@ -8,7 +6,7 @@ export default function PrivateDomainFramework() {
             title: "品牌助理",
             subtitle: "Brand Assistant",
             mode: "一對多 (One-to-Many)",
-            icon: "📢",
+            icon: "ri-megaphone-line",
             color: "from-blue-500 to-cyan-500",
             desc: "單向輸出的資訊發布者",
             content: "提供新品資訊、發布專屬優惠折扣",
@@ -19,7 +17,7 @@ export default function PrivateDomainFramework() {
             title: "話題專家",
             subtitle: "Topic Expert",
             mode: "多對多 (Many-to-Many)",
-            icon: "💬",
+            icon: "ri-chat-smile-3-line",
             color: "from-purple-500 to-pink-500",
             desc: "引導討論與互動的專家",
             content: "場景相關知識、資訊分享、線下活動、話題策展",
@@ -30,7 +28,7 @@ export default function PrivateDomainFramework() {
             title: "品牌共創",
             subtitle: "Brand Co-creation",
             mode: "品牌對 KOC",
-            icon: "🤝",
+            icon: "ri-sparkling-2-line",
             color: "from-amber-500 to-orange-500",
             desc: "與關鍵用戶 (KOC) 共同成長",
             content: "產品與內容共創、稀缺體驗或獨家服務",
@@ -67,9 +65,11 @@ export default function PrivateDomainFramework() {
                                         {stage.num}
                                     </div>
 
-                                    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                                    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
                                         <div className="text-center mb-4">
-                                            <div className="text-3xl mb-2">{stage.icon}</div>
+                                            <div className={`inline-flex w-12 h-12 mb-3 rounded-xl bg-gradient-to-br ${stage.color} items-center justify-center text-white shadow-md`}>
+                                                <i className={`${stage.icon} text-2xl`} aria-hidden="true"></i>
+                                            </div>
                                             <h3 className="text-xl font-bold text-gray-900">{stage.title}</h3>
                                             <p className="text-sm text-gray-400">{stage.subtitle}</p>
                                         </div>
@@ -266,12 +266,12 @@ export default function PrivateDomainFramework() {
 
                 {/* CTA */}
                 <div className="text-center mt-20">
-                    <Link
-                        to="/contact"
-                        className="inline-block px-12 py-4 bg-gray-900 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl hover:bg-black transition-all hover:-translate-y-1 text-center"
+                    <a
+                        href="#team"
+                        className="inline-block px-12 py-4 bg-gray-900 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl hover:bg-black transition-all text-center"
                     >
                         了解更多私域策略
-                    </Link>
+                    </a>
                 </div>
             </div >
         </section >

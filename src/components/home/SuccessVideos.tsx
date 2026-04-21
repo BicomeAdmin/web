@@ -74,6 +74,10 @@ export default function SuccessVideos() {
                         </a>
                     </div>
 
+                    <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-50 text-emerald-700 text-[11px] font-bold rounded-full mb-5 border border-emerald-200/60 uppercase tracking-[0.3em]">
+                        <i className="ri-live-line" aria-hidden="true"></i>
+                        Field Notes
+                    </span>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-gray-900 tracking-tighter">
                         操盤實戰經驗分享
                     </h2>

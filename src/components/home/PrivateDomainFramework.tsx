@@ -43,9 +43,12 @@ export default function PrivateDomainFramework() {
                 {/* === 第一部分：品牌私域化三階段 === */}
                 <div className="mb-28">
                     <div className="text-center mb-12">
-
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-50 text-emerald-700 text-[11px] font-bold rounded-full mb-5 border border-emerald-200/60 uppercase tracking-[0.3em]">
+                            <i className="ri-flow-chart" aria-hidden="true"></i>
+                            Maturity Model
+                        </span>
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-gray-900 mb-6 tracking-tighter">
-                            品牌私域化<span className="text-blue-600">三階段</span>
+                            品牌私域化<span className="text-emerald-600">三階段</span>
                         </h2>
                         <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
                             品牌在私域經營中會經歷的成熟度變化，從單向發布到雙向互動，最終達成品牌共創
@@ -102,6 +105,10 @@ export default function PrivateDomainFramework() {
                 {/* === 第二部分：私域運營四步驟 - WebFX 風格環形圖 === */}
                 <div className="mb-28">
                     <div className="text-center mb-16">
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-50 text-emerald-700 text-[11px] font-bold rounded-full mb-5 border border-emerald-200/60 uppercase tracking-[0.3em]">
+                            <i className="ri-refresh-line" aria-hidden="true"></i>
+                            Growth Flywheel
+                        </span>
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-gray-900 mb-6 tracking-tighter">
                             社群營運<span className="text-emerald-600">四步驟</span>
                         </h2>

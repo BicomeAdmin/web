@@ -5,6 +5,7 @@ import { useMagnetic } from '../../hooks/useMagnetic';
 export default function BicomeCloudFX() {
     const grid = useInView<HTMLDivElement>();
     const dash = useInView<HTMLDivElement>();
+    const tiers_ = useInView<HTMLDivElement>();
     const stats = useInView<HTMLDivElement>();
     const ctaRef = useMagnetic<HTMLAnchorElement>({ strength: 0.25, radius: 120 });
 
@@ -223,7 +224,11 @@ export default function BicomeCloudFX() {
                         <div className="text-[11px] text-white/40 uppercase tracking-[0.3em] mb-2">8-Tier Progression</div>
                         <div className="text-sm text-white/70">從 <span className="text-emerald-400 font-bold">新手</span> 到 <span className="text-amber-300 font-bold">Boss</span> — 八階成長路徑</div>
                     </div>
-                    <div className="relative flex items-center justify-between gap-1 md:gap-3 max-w-4xl mx-auto">
+                    <div
+                        ref={tiers_.ref}
+                        data-reveal={tiers_.visible ? 'in' : 'out'}
+                        className="reveal-parent relative flex items-center justify-between gap-1 md:gap-3 max-w-4xl mx-auto"
+                    >
                         {/* 連接線 */}
                         <div className="absolute left-0 right-0 top-5 h-[2px] bg-gradient-to-r from-emerald-500/40 via-amber-500/40 to-rose-500/40" />
                         {tiers.map((tier) => (

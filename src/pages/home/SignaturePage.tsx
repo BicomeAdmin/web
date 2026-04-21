@@ -10,6 +10,7 @@ import BicomeCloudFX from '../../components/home/BicomeCloudFX';
 import AIHighlights from '../../components/home/AIHighlights';
 import TeamSection from '../../components/home/TeamSection';
 import Footer from '../../components/layout/Footer';
+import BackToTop from '../../components/layout/BackToTop';
 
 export default function SignaturePage() {
     return (
@@ -50,6 +51,7 @@ export default function SignaturePage() {
             </main>
 
             <Footer />
+            <BackToTop />
         </div>
     );
 }

@@ -7,6 +7,7 @@ export default function NavbarSignature() {
     const navItems = [
         { label: "核心服務", href: "#services" },
         { label: "成功案例", href: "#cases" },
+        { label: "用戶忠誠", href: "#loyalty" },
         { label: "方法論", href: "#methodology" },
         { label: "團隊", href: "#team" },
     ];

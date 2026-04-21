@@ -35,15 +35,15 @@ export default function CoreServices() {
                 { title: "私域數據報告", desc: "月度深度分析報告，讓決策有跡可循。" },
                 { title: "用戶忠誠系統", desc: "遊戲化機制設計，打造品牌護城河。" }
             ],
-            // Royal Navy Theme
-            theme: "blue",
+            // Ink (slate) Theme — 與品牌深色棧一致，不再引入外部 navy
+            theme: "ink",
             bgCard: "bg-white",
-            headerBg: "bg-[#0b1c3e]", // Royal Navy Blue
+            headerBg: "bg-slate-900",
             headerText: "text-white",
-            accentText: "text-[#0b1c3e]",
-            iconBg: "bg-blue-50",
+            accentText: "text-slate-900",
+            iconBg: "bg-slate-50",
             icon: (
-                <svg className="w-6 h-6 text-[#0b1c3e]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-slate-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
             )
@@ -66,7 +66,7 @@ export default function CoreServices() {
                         </div>
                         <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-gray-900 tracking-tighter leading-[1.1]">
                             結合<span className="text-emerald-800">人性營運</span>與<br />
-                            <span className="text-[#0b1c3e]">數據賦能</span>的增長系統
+                            <span className="text-slate-900">數據賦能</span>的增長系統
                         </h2>
                     </div>
                     <div className="max-w-md pb-2">

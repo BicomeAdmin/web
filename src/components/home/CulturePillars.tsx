@@ -17,14 +17,14 @@ export default function CulturePillars() {
             title: '持續學習',
             subtitle: 'Continuous Learning',
             description: '好奇心是動能。每次嘗試都沉澱為可重用的知識模組。',
-            gradient: 'from-blue-500 to-indigo-500',
+            gradient: 'from-emerald-600 to-emerald-800',
         },
         {
             icon: 'ri-refresh-line',
             title: '復盤優化',
             subtitle: 'Review & Optimize',
             description: '復盤不是檢討，是把失誤變成下一次成功的養分。',
-            gradient: 'from-amber-500 to-orange-500',
+            gradient: 'from-amber-500 to-amber-600',
         },
     ];
 

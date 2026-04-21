@@ -20,7 +20,7 @@ export default function MethodologyCEO() {
             subtitle: "Gamified Operations",
             description: "把大目標拆成小勝利：任務、等級、即時反饋讓用戶樂此不疲，潛移默化完成品牌想讓他們走的那條路。",
             features: ["任務拆解設計", "即時反饋機制", "品牌共創"],
-            gradient: "from-amber-500 to-orange-500",
+            gradient: "from-amber-500 to-amber-600",
             glowColor: "245, 158, 11"
         },
         {
@@ -29,8 +29,8 @@ export default function MethodologyCEO() {
             subtitle: "口袋私域學",
             description: "每個社群都是品牌的一個口袋，不同目的對應不同用戶分群。LINE、Discord、IG 廣播專區多載體矩陣營運。",
             features: ["LINE 私域社群", "Discord 社群", "IG 廣播專區"],
-            gradient: "from-blue-500 to-indigo-500",
-            glowColor: "59, 130, 246"
+            gradient: "from-slate-700 to-slate-900",
+            glowColor: "51, 65, 85"
         }
     ];
 
@@ -58,7 +58,7 @@ export default function MethodologyCEO() {
                                     ? 'hover:shadow-[0_25px_80px_rgba(16,185,129,0.25)]'
                                     : method.glowColor === '245, 158, 11'
                                         ? 'hover:shadow-[0_25px_80px_rgba(245,158,11,0.25)]'
-                                        : 'hover:shadow-[0_25px_80px_rgba(59,130,246,0.25)]'
+                                        : 'hover:shadow-[0_25px_80px_rgba(51,65,85,0.2)]'
                             }`}
                         >
                             {/* 編號 */}

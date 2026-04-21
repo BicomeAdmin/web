@@ -1,5 +1,5 @@
 export default function PrivateDomainFramework() {
-    // 三階段數據
+    // 三階段數據：emerald family + amber 遞進（01 淺 → 02 中 → 03 深強調）
     const stages = [
         {
             num: "01",
@@ -7,7 +7,7 @@ export default function PrivateDomainFramework() {
             subtitle: "Brand Assistant",
             mode: "一對多 (One-to-Many)",
             icon: "ri-megaphone-line",
-            color: "from-blue-500 to-cyan-500",
+            color: "from-emerald-400 to-emerald-500",
             desc: "單向輸出的資訊發布者",
             content: "提供新品資訊、發布專屬優惠折扣",
             trait: "用戶主要為獲取品牌獨家資訊而留在群內"
@@ -18,7 +18,7 @@ export default function PrivateDomainFramework() {
             subtitle: "Topic Expert",
             mode: "多對多 (Many-to-Many)",
             icon: "ri-chat-smile-3-line",
-            color: "from-purple-500 to-pink-500",
+            color: "from-emerald-600 to-teal-600",
             desc: "引導討論與互動的專家",
             content: "場景相關知識、資訊分享、線下活動、話題策展",
             trait: "延伸至使用場景與相關興趣話題，創造雙向互動"
@@ -29,7 +29,7 @@ export default function PrivateDomainFramework() {
             subtitle: "Brand Co-creation",
             mode: "品牌對 KOC",
             icon: "ri-sparkling-2-line",
-            color: "from-amber-500 to-orange-500",
+            color: "from-amber-500 to-amber-600",
             desc: "與關鍵用戶 (KOC) 共同成長",
             content: "產品與內容共創、稀缺體驗或獨家服務",
             trait: "孵化品牌大使，主動維護並協助推廣品牌"
@@ -58,7 +58,7 @@ export default function PrivateDomainFramework() {
                     {/* 階段卡片 - 橫向時間軸 */}
                     <div className="relative">
                         {/* 連接線 */}
-                        <div className="hidden lg:block absolute top-24 left-[16%] right-[16%] h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-amber-500 rounded-full" />
+                        <div className="hidden lg:block absolute top-24 left-[16%] right-[16%] h-1 bg-gradient-to-r from-emerald-400 via-emerald-600 to-amber-500 rounded-full" />
 
                         <div className="grid lg:grid-cols-3 gap-8">
                             {stages.map((stage, index) => (
@@ -77,21 +77,21 @@ export default function PrivateDomainFramework() {
                                             <p className="text-sm text-gray-400">{stage.subtitle}</p>
                                         </div>
 
-                                        <div className={`inline-block w-full px-3 py-1.5 bg-gradient-to-r ${stage.color} bg-opacity-10 rounded-full text-center text-sm font-medium text-gray-700 mb-4`} style={{ background: `linear-gradient(to right, rgba(59,130,246,0.1), rgba(168,85,247,0.1))` }}>
+                                        <div className="inline-block w-full px-3 py-1.5 bg-emerald-50 border border-emerald-200/50 rounded-full text-center text-sm font-medium text-emerald-700 mb-4">
                                             {stage.mode}
                                         </div>
 
                                         <div className="space-y-3 text-sm text-gray-600">
                                             <div className="flex gap-2">
-                                                <span className="text-blue-500">定位</span>
+                                                <span className="text-emerald-600 font-semibold shrink-0 w-10">定位</span>
                                                 <span>{stage.desc}</span>
                                             </div>
                                             <div className="flex gap-2">
-                                                <span className="text-purple-500">內容</span>
+                                                <span className="text-emerald-600 font-semibold shrink-0 w-10">內容</span>
                                                 <span>{stage.content}</span>
                                             </div>
                                             <div className="flex gap-2">
-                                                <span className="text-amber-500">特徵</span>
+                                                <span className="text-amber-600 font-semibold shrink-0 w-10">特徵</span>
                                                 <span>{stage.trait}</span>
                                             </div>
                                         </div>
@@ -137,7 +137,7 @@ export default function PrivateDomainFramework() {
                                     icon: 'ri-repeat-line',
                                     desc: '建立有價值的互動，讓用戶持續關注',
                                     tags: ['社群常態活動', '專屬權益設計', '個性化溝通'],
-                                    color: 'teal',
+                                    color: 'emerald',
                                 },
                                 {
                                     num: '04',
@@ -155,14 +155,12 @@ export default function PrivateDomainFramework() {
                                     icon: 'ri-fire-line',
                                     desc: '激發用戶主動討論、成為自發傳播者',
                                     tags: ['多對多互動', '內容共創', 'KOC 激勵'],
-                                    color: 'orange',
+                                    color: 'emerald',
                                 },
                             ].map((s, i) => {
                                 const colorMap: Record<string, { bg: string; text: string; ring: string; tagBg: string; tagText: string }> = {
                                     emerald: { bg: 'bg-emerald-500', text: 'text-emerald-600', ring: 'ring-emerald-200', tagBg: 'bg-emerald-50', tagText: 'text-emerald-700' },
-                                    teal: { bg: 'bg-teal-500', text: 'text-teal-600', ring: 'ring-teal-200', tagBg: 'bg-teal-50', tagText: 'text-teal-700' },
                                     amber: { bg: 'bg-amber-500', text: 'text-amber-600', ring: 'ring-amber-200', tagBg: 'bg-amber-50', tagText: 'text-amber-700' },
-                                    orange: { bg: 'bg-orange-500', text: 'text-orange-600', ring: 'ring-orange-200', tagBg: 'bg-orange-50', tagText: 'text-orange-700' },
                                 };
                                 const c = colorMap[s.color];
                                 return (

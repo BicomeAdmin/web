@@ -44,7 +44,7 @@ export default function PrivateDomainFramework() {
                 <div className="mb-28">
                     <div className="text-center mb-12">
 
-                        <h2 className="text-4xl md:text-5xl font-display font-black text-gray-900 mb-6 tracking-tighter">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-gray-900 mb-6 tracking-tighter">
                             品牌私域化<span className="text-blue-600">三階段</span>
                         </h2>
                         <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
@@ -102,7 +102,7 @@ export default function PrivateDomainFramework() {
                 {/* === 第二部分：私域運營四步驟 - WebFX 風格環形圖 === */}
                 <div className="mb-28">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-display font-black text-gray-900 mb-6 tracking-tighter">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-gray-900 mb-6 tracking-tighter">
                             社群營運<span className="text-emerald-600">四步驟</span>
                         </h2>
                         <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">

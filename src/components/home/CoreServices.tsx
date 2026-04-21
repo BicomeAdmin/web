@@ -62,7 +62,7 @@ export default function CoreServices() {
                             <span className="h-[1px] w-12 bg-gray-400"></span>
                             <span className="text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">Our Expertise</span>
                         </div>
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-gray-900 tracking-tight leading-[1.1]">
+                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-gray-900 tracking-tighter leading-[1.1]">
                             結合<span className="text-emerald-800">人性營運</span>與<br />
                             <span className="text-[#0b1c3e]">數據賦能</span>的增長系統
                         </h2>

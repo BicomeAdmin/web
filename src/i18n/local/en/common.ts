@@ -42,6 +42,24 @@ export default {
     'footer.freeDiagnose': 'Free Initial Diagnosis',
     'footer.copyright': 'All rights reserved.',
 
+    // Team section
+    'team.badge': 'Meet the Team',
+    'team.titleA': 'Ready to start your',
+    'team.titleB': 'Private Domain Growth Journey',
+    'team.sub': 'Our expert team is ready to consult with you and craft a user-operations strategy tailored to your brand.',
+    'team.cta.question': 'Need a faster response?',
+    'team.cta.desc': "Join Bicome's official LINE account and our specialist will schedule a private-domain diagnosis for your brand.",
+    'team.cta.button': 'Join LINE Official Account',
+    'team.paul.title': 'CEO',
+    'team.paul.role': 'Founder & Chief Executive',
+    'team.paul.description': "10+ years in user operations, having helped 200+ brands build private-domain ecosystems. Specializes in brand strategy and business model innovation.",
+    'team.jocelyn.title': 'CEO Assistant',
+    'team.jocelyn.role': 'Executive Special Assistant',
+    'team.jocelyn.description': 'Coordinates enterprise-tier client projects across teams to ensure every engagement moves forward and hits its goals.',
+    'team.judy.title': 'Business Development Director',
+    'team.judy.role': 'Business Development Director',
+    'team.judy.description': '50+ brands helped to build private-domain operations. Specializes in diagnosing brand pain points and crafting tailored solutions.',
+
     // BackToTop
     'ui.backToTop': 'Back to top',
 

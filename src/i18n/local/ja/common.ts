@@ -42,6 +42,24 @@ export default {
     'footer.freeDiagnose': '無料初期診断',
     'footer.copyright': '全著作権所有。',
 
+    // Team section
+    'team.badge': 'Meet the Team',
+    'team.titleA': 'あなたの',
+    'team.titleB': 'プライベートドメイン成長の旅',
+    'team.sub': '専門チームがいつでもコンサルティング対応します。あなたのブランドに最適なユーザー運営戦略を共に設計しましょう。',
+    'team.cta.question': 'よりリアルタイムな相談をご希望ですか？',
+    'team.cta.desc': 'Bicome LINE 公式アカウントにご参加ください。担当者がブランド向けプライベートドメイン診断をセッティングします。',
+    'team.cta.button': 'LINE 公式アカウントに参加',
+    'team.paul.title': 'CEO',
+    'team.paul.role': '創業者兼最高経営責任者',
+    'team.paul.description': 'ユーザー運営領域で 10 年以上、200 以上のブランドのプライベートドメイン構築を支援。ブランド戦略とビジネスモデル革新が専門。',
+    'team.jocelyn.title': 'CEO アシスタント',
+    'team.jocelyn.role': '社長特別補佐',
+    'team.jocelyn.description': 'エンタープライズ案件の統括とチーム横断の調整を担当し、各プロジェクトが目標達成まで進むようサポート。',
+    'team.judy.title': 'プライベートドメイン事業責任者',
+    'team.judy.role': 'Business Development Director',
+    'team.judy.description': '50 以上のブランドのプライベートドメイン体制構築を支援。ブランドの課題を分析しカスタム提案を組み立てるのが得意。',
+
     // BackToTop
     'ui.backToTop': 'トップへ戻る',
 

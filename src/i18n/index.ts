@@ -36,8 +36,8 @@ const syncHtmlLang = (lng: string) => {
     }
 };
 
-// init 完成 + 後續切換都同步 <html lang>
-i18n.on('initialized', () => syncHtmlLang(i18n.language));
+// 初始設定（同步、不等 event）+ 後續切換都同步 <html lang>
+syncHtmlLang(i18n.language);
 i18n.on('languageChanged', syncHtmlLang);
 
 export default i18n;

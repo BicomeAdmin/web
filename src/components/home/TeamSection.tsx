@@ -1,82 +1,57 @@
+import { useTranslation } from 'react-i18next';
 import { useInView } from '../../hooks/useInView';
 import { useMagnetic } from '../../hooks/useMagnetic';
 
-const teamMembers = [
-    {
-        name: "Paul",
-        title: "CEO",
-        role: "創辦人暨執行長",
-        description: "深耕用戶營運領域超過 10 年，曾協助超過 200 個品牌打造私域生態系。專精於品牌策略規劃與商業模式創新。",
-        email: "paul@bicome.cc",
-        lineId: "0988726087",
-        phone: "0988-726-087",
-    },
-    {
-        name: "Jocelyn",
-        title: "CEO 特助",
-        role: "執行長特別助理",
-        description: "負責企業級客戶專案統籌與跨部門協調，確保每個專案都能順利推進並達成目標。",
-        email: "jocelyn@bicome.cc",
-        lineId: "achiu1119",
-        phone: "0937-525-107",
-    },
-    {
-        name: "Judy",
-        title: "私域業務總監",
-        role: "Business Development Director",
-        description: "專注於品牌私域策略諮詢，擅長分析 brand 痛點並提供客製化解決方案。已成功協助 50+ 品牌建立私域營運體系。",
-        email: "judy@bicome.cc",
-        lineId: "judyyyyyy",
-        phone: "0988-983-660",
-    },
+const TEAM = [
+    { key: 'paul', name: 'Paul', email: 'paul@bicome.cc', lineId: '0988726087', phone: '0988-726-087' },
+    { key: 'jocelyn', name: 'Jocelyn', email: 'jocelyn@bicome.cc', lineId: 'achiu1119', phone: '0937-525-107' },
+    { key: 'judy', name: 'Judy', email: 'judy@bicome.cc', lineId: 'judyyyyyy', phone: '0988-983-660' },
 ];
 
 export default function TeamSection() {
+    const { t } = useTranslation();
     const grid = useInView<HTMLDivElement>();
     const cta = useInView<HTMLDivElement>();
     const lineCtaRef = useMagnetic<HTMLAnchorElement>({ strength: 0.2, radius: 100 });
+
     return (
         <section id="team" className="relative py-24 md:py-32 bg-gradient-to-b from-[#020617] via-[#0a1f1a] to-[#020617] text-white overflow-hidden">
-            {/* 柔光 */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-emerald-500/10 rounded-full blur-[120px]" />
             </div>
 
             <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-                {/* 標題 */}
                 <div className="text-center mb-16">
                     <span className="inline-block px-4 py-1.5 bg-emerald-500/10 text-emerald-400 text-[11px] font-bold rounded-full mb-6 border border-emerald-500/20 uppercase tracking-[0.3em]">
-                        Meet the Team
+                        {t('team.badge')}
                     </span>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black tracking-tighter mb-6">
-                        準備好開始您的
+                        {t('team.titleA')}
                         <span className="block mt-2 bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-500 bg-clip-text text-transparent">
-                            私域成長之旅
+                            {t('team.titleB')}
                         </span>
                     </h2>
                     <p className="text-lg text-white/50 max-w-2xl mx-auto leading-relaxed">
-                        我們的專業團隊隨時準備為您提供諮詢服務，一起打造屬於您品牌的用戶營運策略。
+                        {t('team.sub')}
                     </p>
                 </div>
 
-                {/* 團隊卡片 */}
                 <div ref={grid.ref} data-reveal={grid.visible ? 'in' : 'out'} className="reveal-parent grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch mb-16">
-                    {teamMembers.map((member) => (
+                    {TEAM.map((member) => (
                         <article
-                            key={member.name}
+                            key={member.key}
                             className="group relative rounded-2xl p-8 bg-white/[0.03] border border-white/10 backdrop-blur-sm hover:bg-white/[0.05] hover:border-emerald-500/30 transition-all duration-500 flex flex-col"
                         >
-                            {/* Hover 柔光 */}
                             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-emerald-500/5 via-transparent to-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                             <div className="relative flex-grow">
                                 <div className="flex items-baseline justify-between mb-4">
                                     <h3 className="text-2xl font-display font-black tracking-tight text-white">{member.name}</h3>
-                                    <span className="text-[10px] font-bold text-emerald-400/80 uppercase tracking-[0.2em]">{member.role}</span>
+                                    <span className="text-[10px] font-bold text-emerald-400/80 uppercase tracking-[0.2em]">{t(`team.${member.key}.role`)}</span>
                                 </div>
-                                <p className="text-sm font-semibold text-emerald-400 mb-4">{member.title}</p>
+                                <p className="text-sm font-semibold text-emerald-400 mb-4">{t(`team.${member.key}.title`)}</p>
                                 <p className="text-[15px] text-white/60 leading-relaxed mb-8">
-                                    {member.description}
+                                    {t(`team.${member.key}.description`)}
                                 </p>
                             </div>
 
@@ -110,17 +85,16 @@ export default function TeamSection() {
                     ))}
                 </div>
 
-                {/* LINE 官方帳號 CTA */}
                 <div ref={cta.ref} className={`relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 p-8 md:p-12 text-center ${cta.visible ? 'reveal-in' : 'reveal-init'}`}>
                     <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
                     <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-48 h-48 bg-white/10 rounded-full blur-3xl" />
 
                     <div className="relative">
                         <h3 className="text-2xl md:text-3xl font-display font-black text-white mb-4 tracking-tight">
-                            需要更即時的諮詢？
+                            {t('team.cta.question')}
                         </h3>
                         <p className="text-white/90 mb-8 max-w-xl mx-auto leading-relaxed">
-                            加入 Bicome LINE 官方帳號，將有專人為您安排初步的品牌私域診斷服務。
+                            {t('team.cta.desc')}
                         </p>
                         <a
                             ref={lineCtaRef}
@@ -132,7 +106,7 @@ export default function TeamSection() {
                             <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314" />
                             </svg>
-                            加入 LINE 官方帳號
+                            {t('team.cta.button')}
                         </a>
                     </div>
                 </div>

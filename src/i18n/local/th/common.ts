@@ -42,6 +42,24 @@ export default {
     'footer.freeDiagnose': 'วินิจฉัยเบื้องต้นฟรี',
     'footer.copyright': 'สงวนลิขสิทธิ์.',
 
+    // Team section
+    'team.badge': 'Meet the Team',
+    'team.titleA': 'พร้อมเริ่มต้น',
+    'team.titleB': 'เส้นทางเติบโต Private Domain',
+    'team.sub': 'ทีมผู้เชี่ยวชาญของเราพร้อมให้คำปรึกษา เพื่อออกแบบกลยุทธ์ User Operations ให้ตรงกับแบรนด์ของคุณ',
+    'team.cta.question': 'ต้องการปรึกษาแบบเรียลไทม์?',
+    'team.cta.desc': 'เข้าร่วม LINE Official Account ของ Bicome ทีมงานจะนัดเซสชันวินิจฉัย Private Domain สำหรับแบรนด์คุณ',
+    'team.cta.button': 'เข้าร่วม LINE Official Account',
+    'team.paul.title': 'CEO',
+    'team.paul.role': 'ผู้ก่อตั้งและ CEO',
+    'team.paul.description': 'มีประสบการณ์มากกว่า 10 ปีในงาน User Operations ช่วยแบรนด์กว่า 200 แห่งสร้างระบบนิเวศ Private Domain เชี่ยวชาญกลยุทธ์แบรนด์และนวัตกรรมโมเดลธุรกิจ',
+    'team.jocelyn.title': 'CEO Assistant',
+    'team.jocelyn.role': 'ผู้ช่วยพิเศษ CEO',
+    'team.jocelyn.description': 'ดูแลการประสานโครงการระดับองค์กรข้ามทีม เพื่อให้แต่ละโครงการเดินหน้าและบรรลุเป้าหมาย',
+    'team.judy.title': 'ผู้อำนวยการพัฒนาธุรกิจ',
+    'team.judy.role': 'Business Development Director',
+    'team.judy.description': 'ช่วยแบรนด์กว่า 50 แห่งสร้างระบบ Private Domain เชี่ยวชาญวิเคราะห์ pain point และออกแบบโซลูชันเฉพาะ',
+
     // BackToTop
     'ui.backToTop': 'กลับด้านบน',
 

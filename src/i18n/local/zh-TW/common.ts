@@ -42,6 +42,25 @@ export default {
     'footer.freeDiagnose': '免費初步診斷',
     'footer.copyright': '保留所有權利。',
 
+    // Team section
+    'team.badge': 'Meet the Team',
+    'team.titleA': '準備好開始您的',
+    'team.titleB': '私域成長之旅',
+    'team.sub': '我們的專業團隊隨時準備為您提供諮詢服務，一起打造屬於您品牌的用戶營運策略。',
+    'team.cta.question': '需要更即時的諮詢？',
+    'team.cta.desc': '加入 Bicome LINE 官方帳號，將有專人為您安排初步的品牌私域診斷服務。',
+    'team.cta.button': '加入 LINE 官方帳號',
+    // 成員
+    'team.paul.title': 'CEO',
+    'team.paul.role': '創辦人暨執行長',
+    'team.paul.description': '深耕用戶營運領域超過 10 年，曾協助超過 200 個品牌打造私域生態系。專精於品牌策略規劃與商業模式創新。',
+    'team.jocelyn.title': 'CEO 特助',
+    'team.jocelyn.role': '執行長特別助理',
+    'team.jocelyn.description': '負責企業級客戶專案統籌與跨部門協調，確保每個專案都能順利推進並達成目標。',
+    'team.judy.title': '私域業務總監',
+    'team.judy.role': 'Business Development Director',
+    'team.judy.description': '專注於品牌私域策略諮詢，擅長分析品牌痛點並提供客製化解決方案。已成功協助 50+ 品牌建立私域營運體系。',
+
     // BackToTop
     'ui.backToTop': '回到頂部',
 

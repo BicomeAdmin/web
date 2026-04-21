@@ -10,7 +10,7 @@ export default function BicomeCloudFX() {
     const levelIcons = ["ri-leaf-line", "ri-star-line", "ri-vip-diamond-line", "ri-vip-crown-line", "ri-fire-line"];
 
     return (
-        <section className="py-20 bg-gradient-to-br from-[#0a0a1a] via-[#1a0a2e] to-[#0a1a2e] text-white overflow-hidden relative">
+        <section id="loyalty" className="py-20 bg-gradient-to-br from-[#0a0a1a] via-[#1a0a2e] to-[#0a1a2e] text-white overflow-hidden relative">
             {/* 背景光暈 */}
             <div className="absolute top-0 left-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-[120px]" />
 

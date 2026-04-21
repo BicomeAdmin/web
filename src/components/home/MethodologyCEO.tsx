@@ -44,16 +44,13 @@ export default function MethodologyCEO() {
                     {methodologies.map((method) => (
                         <div
                             key={method.number}
-                            className="group relative bg-white rounded-2xl p-8 border border-gray-100 transition-all duration-500 hover:-translate-y-2"
-                            style={{
-                                boxShadow: 'none',
-                            }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.boxShadow = `0 25px 80px rgba(${method.glowColor}, 0.25)`;
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.boxShadow = 'none';
-                            }}
+                            className={`group relative bg-white rounded-2xl p-8 border border-gray-100 transition-all duration-500 hover:-translate-y-1 hover:border-transparent ${
+                                method.glowColor === '16, 185, 129'
+                                    ? 'hover:shadow-[0_25px_80px_rgba(16,185,129,0.25)]'
+                                    : method.glowColor === '245, 158, 11'
+                                        ? 'hover:shadow-[0_25px_80px_rgba(245,158,11,0.25)]'
+                                        : 'hover:shadow-[0_25px_80px_rgba(59,130,246,0.25)]'
+                            }`}
                         >
                             {/* 編號 */}
                             <div className={`absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br ${method.gradient} rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300`}>

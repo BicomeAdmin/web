@@ -203,8 +203,8 @@ export default function PrivateDomainFramework() {
                                         {/* 中心白圓 */}
                                         <circle cx="100" cy="100" r="40" fill="white" stroke="#e2e8f0" strokeWidth="2" />
 
-                                        {/* 箭頭指示器 - 脈動動畫 */}
-                                        <g className="animate-pulse">
+                                        {/* 箭頭指示器（靜態，減少視覺噪音） */}
+                                        <g>
                                             <polygon points="100,15 105,25 95,25" fill="#3b82f6" />
                                             <polygon points="185,100 175,105 175,95" fill="#14b8a6" />
                                             <polygon points="100,185 95,175 105,175" fill="#22c55e" />
@@ -212,18 +212,18 @@ export default function PrivateDomainFramework() {
                                         </g>
                                     </svg>
 
-                                    {/* 中心內容 - 帶有脈動動畫 */}
+                                    {/* 中心內容 */}
                                     <div className="absolute inset-0 flex flex-col items-center justify-center">
                                         <div className="relative">
-                                            <div className="absolute inset-0 bg-emerald-500/20 rounded-full animate-ping" style={{ animationDuration: '2s' }} />
+                                            <div className="absolute inset-0 bg-emerald-500/20 rounded-full animate-ping" style={{ animationDuration: '3s' }} />
                                             <div className="relative w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-full flex items-center justify-center shadow-lg">
-                                                <svg className="w-6 h-6 text-white animate-spin" style={{ animationDuration: '3s' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                                                 </svg>
                                             </div>
                                         </div>
-                                        <div className="text-sm font-bold text-gray-900 mt-2">私域飛輪</div>
-                                        <div className="text-[10px] text-emerald-600 font-medium">持續循環增長</div>
+                                        <div className="text-sm font-bold text-gray-900 mt-3">私域飛輪</div>
+                                        <div className="text-[10px] text-emerald-600 font-medium tracking-widest uppercase mt-1">持續循環增長</div>
                                     </div>
                                 </div>
                             </div>

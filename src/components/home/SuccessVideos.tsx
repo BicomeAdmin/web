@@ -84,7 +84,7 @@ export default function SuccessVideos() {
                     {videos.map((video, index) => (
                         <div
                             key={index}
-                            className="group relative bg-black rounded-3xl overflow-hidden shadow-2xl hover:shadow-[0_20px_60px_rgba(0,0,0,0.3)] transition-all duration-500 hover:-translate-y-2"
+                            className="group relative bg-black rounded-2xl overflow-hidden shadow-2xl hover:shadow-[0_20px_60px_rgba(0,0,0,0.3)] transition-all duration-500 hover:-translate-y-2"
                         >
                             {/* 影片容器 */}
                             <div

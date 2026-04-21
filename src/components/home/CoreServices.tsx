@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 export default function CoreServices() {
     const services = [
         {
@@ -80,12 +78,10 @@ export default function CoreServices() {
                     {services.map((service, index) => (
                         <div
                             key={service.id}
-                            className={`group relative flex flex-col bg-white rounded-[32px] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl shadow-gray-200/50 border border-gray-100`}
+                            className={`group relative flex flex-col bg-white rounded-2xl overflow-hidden transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl shadow-gray-200/50 border border-gray-100`}
                         >
                             {/* 頂部色塊 Header */}
                             <div className={`${service.headerBg} p-8 md:p-10 relative overflow-hidden`}>
-                                {/* 裝飾紋理 */}
-                                <div className="absolute inset-0 opacity-10 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay" />
                                 <div className={`absolute -right-12 -bottom-24 w-64 h-64 rounded-full bg-white opacity-5 blur-3xl`} />
 
                                 <div className="relative z-10 flex justify-between items-start">
@@ -128,8 +124,8 @@ export default function CoreServices() {
 
                                 {/* 底部按鈕 */}
                                 <div className="pt-6 border-t border-gray-100">
-                                    <Link
-                                        to="/contact"
+                                    <a
+                                        href="#team"
                                         className="inline-flex items-center gap-2 font-bold text-sm uppercase tracking-wider group/link text-gray-900 transition-colors hover:text-gray-600"
                                     >
                                         <span className="border-b-2 border-transparent group-hover/link:border-gray-900 transition-all">
@@ -138,7 +134,7 @@ export default function CoreServices() {
                                         <svg className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                         </svg>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                         </div>

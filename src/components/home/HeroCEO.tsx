@@ -142,17 +142,18 @@ export default function HeroCEO() {
                                 />
                             </div>
 
-                            {/* 浮動卡片 - 成長數據 */}
+                            {/* 浮動卡片 - AI 即時判讀 */}
                             <div className="absolute -left-6 bottom-16 bg-[#0a1f1a]/90 backdrop-blur-xl rounded-xl shadow-[0_0_30px_rgba(16,185,129,0.2)] p-4 border border-emerald-500/20">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center">
-                                        <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                                        </svg>
+                                    <div className="relative w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-lg flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+                                        <i className="ri-sparkling-2-line text-xl text-white" aria-hidden="true"></i>
+                                        <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping" />
+                                        <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-emerald-400" />
                                     </div>
                                     <div>
-                                        <div className="text-2xl font-display font-extrabold text-emerald-400">+340%</div>
-                                        <div className="text-xs text-white/50">平均用戶成長率</div>
+                                        <div className="text-[10px] text-emerald-400 font-bold tracking-[0.2em] uppercase mb-0.5">AI 判讀中</div>
+                                        <div className="text-base font-display font-extrabold text-white leading-tight">行為 × 流失 × 任務</div>
+                                        <div className="text-[11px] text-white/45">自動推薦、即時預警</div>
                                     </div>
                                 </div>
                             </div>

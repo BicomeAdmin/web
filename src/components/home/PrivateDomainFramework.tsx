@@ -117,157 +117,90 @@ export default function PrivateDomainFramework() {
                         </p>
                     </div>
 
-                    {/* WebFX 風格的環形飛輪圖 */}
+                    {/* 四象限 grid + 循環箭頭（取代原 SVG 飛輪） */}
                     <div className="relative max-w-5xl mx-auto">
-                        <div className="grid lg:grid-cols-[280px_1fr_280px] gap-8 items-center">
-                            {/* 左側說明 */}
-                            <div className="space-y-8 order-2 lg:order-1">
-                                {/* 拉新 */}
-                                <div className="group">
-                                    <div className="flex items-center gap-3 mb-3">
-                                        <div className="w-3 h-3 rounded-full bg-blue-500" />
-                                        <h3 className="text-lg font-bold text-gray-900">拉新 <span className="text-xs font-normal text-gray-400 ml-1">Acquisition</span></h3>
-                                    </div>
-                                    <p className="text-sm text-gray-600 pl-6 leading-relaxed mb-3">透過多元化的引流手段，將用戶從公域引入私域環境</p>
-                                    <div className="flex flex-wrap gap-2 pl-6">
-                                        <span className="px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded">優質內容吸引</span>
-                                        <span className="px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded">品牌故事共鳴</span>
-                                        <span className="px-2 py-1 bg-blue-50 text-blue-600 text-xs rounded">獨家福利觸發</span>
-                                    </div>
-                                </div>
-
-                                {/* 裂變 */}
-                                <div className="group">
-                                    <div className="flex items-center gap-3 mb-3">
-                                        <div className="w-3 h-3 rounded-full bg-purple-500" />
-                                        <h3 className="text-lg font-bold text-gray-900">裂變 <span className="text-xs font-normal text-gray-400 ml-1">Fission</span></h3>
-                                    </div>
-                                    <p className="text-sm text-gray-600 pl-6 leading-relaxed mb-3">建立KOC推薦機制，實現社群的自然增長和擴展</p>
-                                    <div className="flex flex-wrap gap-2 pl-6">
-                                        <span className="px-2 py-1 bg-purple-50 text-purple-600 text-xs rounded">母子群搭建</span>
-                                        <span className="px-2 py-1 bg-purple-50 text-purple-600 text-xs rounded">裂變活動設計</span>
-                                        <span className="px-2 py-1 bg-purple-50 text-purple-600 text-xs rounded">品牌倡導計畫</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* 中心 - SVG 環形圖 */}
-                            <div className="flex justify-center order-1 lg:order-2">
-                                <div className="relative w-72 h-72 md:w-80 md:h-80">
-                                    {/* 旋轉的外環動畫 */}
-                                    <div className="absolute inset-0 animate-spin" style={{ animationDuration: '20s' }}>
-                                        <svg viewBox="0 0 200 200" className="w-full h-full">
-                                            <circle cx="100" cy="100" r="92" fill="none" stroke="url(#outerRingGradient)" strokeWidth="2" strokeDasharray="8 4" opacity="0.3" />
-                                        </svg>
-                                    </div>
-
-                                    {/* 主圖 - 四個扇形區塊 */}
-                                    <svg viewBox="0 0 200 200" className="w-full h-full drop-shadow-xl relative z-10">
-                                        {/* 漸層定義 - 移到前面 */}
-                                        <defs>
-                                            <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" stopColor="#3b82f6" />
-                                                <stop offset="100%" stopColor="#1d4ed8" />
-                                            </linearGradient>
-                                            <linearGradient id="tealGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" stopColor="#14b8a6" />
-                                                <stop offset="100%" stopColor="#0d9488" />
-                                            </linearGradient>
-                                            <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" stopColor="#22c55e" />
-                                                <stop offset="100%" stopColor="#15803d" />
-                                            </linearGradient>
-                                            <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" stopColor="#a855f7" />
-                                                <stop offset="100%" stopColor="#7c3aed" />
-                                            </linearGradient>
-                                            <linearGradient id="outerRingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" stopColor="#3b82f6" />
-                                                <stop offset="50%" stopColor="#14b8a6" />
-                                                <stop offset="100%" stopColor="#a855f7" />
-                                            </linearGradient>
-                                        </defs>
-
-                                        {/* 背景圓 */}
-                                        <circle cx="100" cy="100" r="85" fill="#f8fafc" stroke="#e2e8f0" strokeWidth="1" />
-
-                                        {/* 四個扇形區塊 - 每個 90 度 */}
-                                        {/* 拉新 - 藍色 (右上 0-90度) */}
-                                        <path d="M 100 100 L 100 20 A 80 80 0 0 1 180 100 Z" fill="url(#blueGradient)" className="hover:opacity-80 transition-all duration-300 cursor-pointer" />
-                                        {/* 留存 - 青綠色 (右下 90-180度) */}
-                                        <path d="M 100 100 L 180 100 A 80 80 0 0 1 100 180 Z" fill="url(#tealGradient)" className="hover:opacity-80 transition-all duration-300 cursor-pointer" />
-                                        {/* 活躍 - 綠色 (左下 180-270度) */}
-                                        <path d="M 100 100 L 100 180 A 80 80 0 0 1 20 100 Z" fill="url(#greenGradient)" className="hover:opacity-80 transition-all duration-300 cursor-pointer" />
-                                        {/* 裂變 - 紫色 (左上 270-360度) */}
-                                        <path d="M 100 100 L 20 100 A 80 80 0 0 1 100 20 Z" fill="url(#purpleGradient)" className="hover:opacity-80 transition-all duration-300 cursor-pointer" />
-
-                                        {/* 扇形標籤 */}
-                                        <text x="130" y="60" fill="white" fontSize="10" fontWeight="bold">拉新</text>
-                                        <text x="140" y="115" fill="white" fontSize="10" fontWeight="bold">留存</text>
-                                        <text x="55" y="145" fill="white" fontSize="10" fontWeight="bold">活躍</text>
-                                        <text x="50" y="75" fill="white" fontSize="10" fontWeight="bold">裂變</text>
-
-                                        {/* 中心白圓 */}
-                                        <circle cx="100" cy="100" r="40" fill="white" stroke="#e2e8f0" strokeWidth="2" />
-
-                                        {/* 箭頭指示器（靜態，減少視覺噪音） */}
-                                        <g>
-                                            <polygon points="100,15 105,25 95,25" fill="#3b82f6" />
-                                            <polygon points="185,100 175,105 175,95" fill="#14b8a6" />
-                                            <polygon points="100,185 95,175 105,175" fill="#22c55e" />
-                                            <polygon points="15,100 25,95 25,105" fill="#a855f7" />
-                                        </g>
-                                    </svg>
-
-                                    {/* 中心內容 */}
-                                    <div className="absolute inset-0 flex flex-col items-center justify-center">
-                                        <div className="relative">
-                                            <div className="absolute inset-0 bg-emerald-500/20 rounded-full animate-ping" style={{ animationDuration: '3s' }} />
-                                            <div className="relative w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-full flex items-center justify-center shadow-lg">
-                                                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                                                </svg>
+                        <div className="grid sm:grid-cols-2 gap-4 md:gap-5">
+                            {[
+                                {
+                                    num: '01',
+                                    zh: '拉新',
+                                    en: 'Acquisition',
+                                    icon: 'ri-user-add-line',
+                                    desc: '把用戶從公域引入私域環境',
+                                    tags: ['優質內容吸引', '品牌故事共鳴', '獨家福利觸發'],
+                                    color: 'emerald',
+                                },
+                                {
+                                    num: '02',
+                                    zh: '留存',
+                                    en: 'Retention',
+                                    icon: 'ri-repeat-line',
+                                    desc: '建立有價值的互動，讓用戶持續關注',
+                                    tags: ['社群常態活動', '專屬權益設計', '個性化溝通'],
+                                    color: 'teal',
+                                },
+                                {
+                                    num: '04',
+                                    zh: '裂變',
+                                    en: 'Fission',
+                                    icon: 'ri-share-forward-line',
+                                    desc: '透過 KOC 推薦讓社群自然增長',
+                                    tags: ['母子群搭建', '裂變活動設計', '品牌倡導計畫'],
+                                    color: 'amber',
+                                },
+                                {
+                                    num: '03',
+                                    zh: '活躍',
+                                    en: 'Activation',
+                                    icon: 'ri-fire-line',
+                                    desc: '激發用戶主動討論、成為自發傳播者',
+                                    tags: ['多對多互動', '內容共創', 'KOC 激勵'],
+                                    color: 'orange',
+                                },
+                            ].map((s, i) => {
+                                const colorMap: Record<string, { bg: string; text: string; ring: string; tagBg: string; tagText: string }> = {
+                                    emerald: { bg: 'bg-emerald-500', text: 'text-emerald-600', ring: 'ring-emerald-200', tagBg: 'bg-emerald-50', tagText: 'text-emerald-700' },
+                                    teal: { bg: 'bg-teal-500', text: 'text-teal-600', ring: 'ring-teal-200', tagBg: 'bg-teal-50', tagText: 'text-teal-700' },
+                                    amber: { bg: 'bg-amber-500', text: 'text-amber-600', ring: 'ring-amber-200', tagBg: 'bg-amber-50', tagText: 'text-amber-700' },
+                                    orange: { bg: 'bg-orange-500', text: 'text-orange-600', ring: 'ring-orange-200', tagBg: 'bg-orange-50', tagText: 'text-orange-700' },
+                                };
+                                const c = colorMap[s.color];
+                                return (
+                                    <article
+                                        key={s.zh}
+                                        className={`group relative bg-white rounded-2xl p-6 md:p-7 border border-gray-100 transition-all duration-500 hover:shadow-xl hover:ring-4 hover:${c.ring} hover:-translate-y-1 ${i === 2 ? 'sm:order-4' : i === 3 ? 'sm:order-3' : ''}`}
+                                    >
+                                        <div className="flex items-start justify-between mb-4">
+                                            <div className={`w-12 h-12 rounded-xl ${c.bg} flex items-center justify-center shadow-md`}>
+                                                <i className={`${s.icon} text-xl text-white`} aria-hidden="true"></i>
                                             </div>
+                                            <span className={`text-4xl font-display font-black ${c.text}/15`} aria-hidden="true">{s.num}</span>
                                         </div>
-                                        <div className="text-sm font-bold text-gray-900 mt-3">私域飛輪</div>
-                                        <div className="text-[10px] text-emerald-600 font-medium tracking-widest uppercase mt-1">持續循環增長</div>
-                                    </div>
-                                </div>
-                            </div>
+                                        <h3 className="text-xl md:text-2xl font-display font-bold text-gray-900 mb-1">
+                                            {s.zh}
+                                            <span className="text-xs font-normal text-gray-400 ml-2 tracking-wide uppercase">{s.en}</span>
+                                        </h3>
+                                        <p className="text-sm text-gray-600 leading-relaxed mb-4">{s.desc}</p>
+                                        <div className="flex flex-wrap gap-1.5">
+                                            {s.tags.map((tag) => (
+                                                <span key={tag} className={`px-2 py-1 ${c.tagBg} ${c.tagText} text-xs rounded-md font-medium`}>{tag}</span>
+                                            ))}
+                                        </div>
+                                    </article>
+                                );
+                            })}
+                        </div>
 
-                            {/* 右側說明 */}
-                            <div className="space-y-8 order-3">
-                                {/* 留存 */}
-                                <div className="group">
-                                    <div className="flex items-center gap-3 mb-3">
-                                        <div className="w-3 h-3 rounded-full bg-teal-500" />
-                                        <h3 className="text-lg font-bold text-gray-900">留存 <span className="text-xs font-normal text-gray-400 ml-1">Retention</span></h3>
-                                    </div>
-                                    <p className="text-sm text-gray-600 pl-6 leading-relaxed mb-3">建立有價值的互動機制，確保用戶持續關注並參與品牌活動</p>
-                                    <div className="flex flex-wrap gap-2 pl-6">
-                                        <span className="px-2 py-1 bg-teal-50 text-teal-600 text-xs rounded">社群常態活動</span>
-                                        <span className="px-2 py-1 bg-teal-50 text-teal-600 text-xs rounded">專屬權益設計</span>
-                                        <span className="px-2 py-1 bg-teal-50 text-teal-600 text-xs rounded">個性化溝通</span>
-                                    </div>
-                                </div>
-
-                                {/* 活躍 */}
-                                <div className="group">
-                                    <div className="flex items-center gap-3 mb-3">
-                                        <div className="w-3 h-3 rounded-full bg-green-500" />
-                                        <h3 className="text-lg font-bold text-gray-900">活躍 <span className="text-xs font-normal text-gray-400 ml-1">Activation</span></h3>
-                                    </div>
-                                    <p className="text-sm text-gray-600 pl-6 leading-relaxed mb-3">激發用戶主動參與討論和分享，成為品牌的自發傳播者</p>
-                                    <div className="flex flex-wrap gap-2 pl-6">
-                                        <span className="px-2 py-1 bg-green-50 text-green-600 text-xs rounded">多對多互動機制</span>
-                                        <span className="px-2 py-1 bg-green-50 text-green-600 text-xs rounded">內容共創計畫</span>
-                                        <span className="px-2 py-1 bg-green-50 text-green-600 text-xs rounded">KOC激勵系統</span>
-                                    </div>
+                        {/* 中心飛輪 badge（mobile 隱藏、桌機絕對定位在四卡中心） */}
+                        <div className="hidden sm:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                            <div className="relative">
+                                <div className="absolute inset-0 bg-emerald-500/30 rounded-full blur-xl animate-glow-pulse" />
+                                <div className="relative w-20 h-20 md:w-24 md:h-24 bg-white rounded-full border-4 border-emerald-400/30 flex flex-col items-center justify-center shadow-2xl">
+                                    <i className="ri-refresh-line text-2xl text-emerald-600 animate-[spin_12s_linear_infinite]" aria-hidden="true"></i>
+                                    <div className="text-[9px] font-bold text-emerald-700 mt-0.5 tracking-widest">飛輪</div>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div >
 

@@ -7,6 +7,7 @@ import PrivateDomainFramework from '../../components/home/PrivateDomainFramework
 import SuccessVideos from '../../components/home/SuccessVideos';
 import CulturePillars from '../../components/home/CulturePillars';
 import BicomeCloudFX from '../../components/home/BicomeCloudFX';
+import AIHighlights from '../../components/home/AIHighlights';
 import TeamSection from '../../components/home/TeamSection';
 import Footer from '../../components/layout/Footer';
 
@@ -28,6 +29,9 @@ export default function SignaturePage() {
 
                 {/* 4. BicomeCloudFX - 技術與產品力（深色，節奏錨點） */}
                 <BicomeCloudFX />
+
+                {/* 4.5 AI Highlights - AI 具體能做到什麼（深→亮過渡） */}
+                <AIHighlights />
 
                 {/* 5. Methodology - 方法論（亮色） */}
                 <MethodologyCEO />

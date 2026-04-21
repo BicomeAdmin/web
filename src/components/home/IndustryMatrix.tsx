@@ -42,7 +42,7 @@ export default function IndustryMatrix() {
         {
             name: "運動趣",
             subtitle: "跑者充電站",
-            memberCount: 332,
+            memberCount: 1032,
             tags: "#慢跑 #休息 #交流",
             icon: "🏃",
             categories: ["精選", "樂"],
@@ -88,7 +88,7 @@ export default function IndustryMatrix() {
         {
             name: "ERSS生活穿搭誌",
             subtitle: "時尚穿搭俱樂部",
-            memberCount: 172,
+            memberCount: 189,
             tags: "#穿搭",
             icon: "👗",
             bgColor: "bg-[#db2777]",
@@ -99,7 +99,7 @@ export default function IndustryMatrix() {
         {
             name: "myBRA女子會聊",
             subtitle: "女性內著專屬社群",
-            memberCount: 284,
+            memberCount: 566,
             tags: "#內衣 #女子",
             icon: "💕",
             bgColor: "bg-[#f472b6]",
@@ -116,7 +116,7 @@ export default function IndustryMatrix() {
             icon: "🛋️",
             bgColor: "bg-[#14b8a6]",
             categories: ["住"],
-            link: "https://line.me/ti/g2/5tuutYkoQjBMpcEMjBfngZavOnx6I4UXr5BsCQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default",
+            link: "https://line.me/ti/g2/1bnll4VblZPUeM0C2XlOyTJL793yDjXhlSInIA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default",
             image: "/images/cases/tahan_casa.jpg"
         },
         // 教育
@@ -151,13 +151,13 @@ export default function IndustryMatrix() {
             icon: "🐕",
             bgColor: "bg-[#8b5cf6]",
             categories: ["樂"],
-            link: "https://line.me/ti/g2/Muf-bTb7HOc22RhfHQpA7EiZDA-XdYXS_FZoCg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default",
+            link: "https://line.me/ti/g2/-ltSyUOezqcMitfzDYMCLLViFQKvhpKfHBk1ag?utm_source=invitation&utm_medium=link_copy&utm_campaign=default",
             image: "/images/cases/pj_joy.jpg"
         },
         {
             name: "💫米特創作星球💫",
             subtitle: "親子遊戲互動",
-            memberCount: 389,
+            memberCount: 740,
             tags: "#育兒公式 #爸媽 #遊戲",
             icon: "🎮",
             bgColor: "bg-[#6366f1]",
@@ -169,7 +169,7 @@ export default function IndustryMatrix() {
         {
             name: "(ENLIV) 絕美日常圈",
             subtitle: "隱形眼鏡美學",
-            memberCount: 115,
+            memberCount: 205,
             tags: "#隱形眼鏡 #美妝",
             icon: "👁️",
             bgColor: "bg-[#ec4899]",
@@ -180,7 +180,7 @@ export default function IndustryMatrix() {
         {
             name: "髮速黑｜養髮陪伴所",
             subtitle: "純淨是我們對您的承諾",
-            memberCount: 298,
+            memberCount: 898,
             tags: "#髮速黑 #養髮 #護髮",
             icon: "💆",
             bgColor: "bg-[#1f2937]",
@@ -196,27 +196,39 @@ export default function IndustryMatrix() {
         <section id="cases" className="py-24 bg-gradient-to-b from-white to-gray-50">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* 標題區 */}
-                <div className="text-center max-w-3xl mx-auto mb-16">
+                <div className="text-center max-w-3xl mx-auto mb-12">
+                    <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-50 text-emerald-700 text-[11px] font-bold rounded-full mb-5 border border-emerald-200/60 uppercase tracking-[0.3em]">
+                        <i className="ri-community-line" aria-hidden="true"></i>
+                        Success Stories
+                    </span>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-gray-900 mb-6 tracking-tighter">
                         真實社群的成功故事
                     </h2>
                 </div>
 
-                {/* 統一 Tab 切換 */}
-                <div className="flex flex-wrap justify-center gap-3 mb-10">
-                    {categories.map((cat) => (
-                        <button
-                            key={cat.id}
-                            onClick={() => setActiveCategory(cat.id)}
-                            className={`flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 ${activeCategory === cat.id
-                                ? 'bg-gray-900 text-white shadow-lg scale-105'
-                                : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                {/* 統一 Tab 切換 — active 下方加小色條 */}
+                <div className="flex flex-wrap justify-center gap-2.5 mb-10">
+                    {categories.map((cat) => {
+                        const isActive = activeCategory === cat.id;
+                        return (
+                            <button
+                                key={cat.id}
+                                onClick={() => setActiveCategory(cat.id)}
+                                aria-pressed={isActive}
+                                className={`relative flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-sm transition-all duration-300 ${
+                                    isActive
+                                        ? 'bg-gray-900 text-white shadow-lg shadow-gray-900/20'
+                                        : 'bg-white text-gray-600 border border-gray-200 hover:border-gray-300 hover:bg-gray-50 hover:text-gray-900'
                                 }`}
-                        >
-                            <i className={`${cat.icon} text-lg`} aria-hidden="true"></i>
-                            <span>{cat.label}</span>
-                        </button>
-                    ))}
+                            >
+                                <i className={`${cat.icon} text-lg ${isActive ? 'text-emerald-300' : ''}`} aria-hidden="true"></i>
+                                <span>{cat.label}</span>
+                                {isActive && (
+                                    <span className="absolute left-1/2 -bottom-2 -translate-x-1/2 w-8 h-[3px] rounded-full bg-gradient-to-r from-emerald-400 to-teal-400" />
+                                )}
+                            </button>
+                        );
+                    })}
                 </div>
 
                 {/* 案例卡片網格 */}

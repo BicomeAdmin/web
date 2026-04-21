@@ -39,6 +39,10 @@ export default function MethodologyCEO() {
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 {/* 標題區 */}
                 <div className="text-center max-w-4xl mx-auto mb-16">
+                    <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-50 text-emerald-700 text-[11px] font-bold rounded-full mb-5 border border-emerald-200/60 uppercase tracking-[0.3em]">
+                        <i className="ri-compasses-2-line" aria-hidden="true"></i>
+                        Methodology
+                    </span>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-gray-900 mb-6 tracking-tighter">
                         Bicome 私域用戶營運的方法論
                     </h2>

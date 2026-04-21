@@ -9,7 +9,7 @@ export default function MethodologyCEO() {
             number: "01",
             title: "精細化營運",
             subtitle: "Refined Operations",
-            description: "精細化營運的本質就是以用戶為中心，與用戶達到深度情感連結的同時也要隨時洞察用戶需求，並將這些需求整合進品牌營運用戶的活動、內容、與相關的執行動作，目標是培育用戶關係並讓用戶擁有最好的體驗，最終完成有效提升用戶的生命周期價值（LTV），歷久而彌新。",
+            description: "用戶中心的日常經營：洞察分層、建立情感連結、讓品牌內容即時回應用戶需求，把單次體驗延伸為長期 LTV。",
             features: ["用戶分層分析", "深度情感連結", "LTV 提升"],
             gradient: "from-emerald-500 to-teal-500",
             glowColor: "16, 185, 129"
@@ -18,8 +18,8 @@ export default function MethodologyCEO() {
             number: "02",
             title: "遊戲化營運",
             subtitle: "Gamified Operations",
-            description: "遊戲化營運也是以用戶為中心，讓用戶本身感到愉悅，重點在享受每一個過程。概念是將大目標拆成好幾個小目標，結合即時的反饋機制，讓用戶不自覺地完成品牌期待達成的階段性目標，整個過程潛移默化卻可以讓用戶樂此不疲，目標是讓用戶享受其中進而提升社群的參與感，最終完成品牌共創。",
-            features: ["目標拆解設計", "即時反饋機制", "品牌共創"],
+            description: "把大目標拆成小勝利：任務、等級、即時反饋讓用戶樂此不疲，潛移默化完成品牌想讓他們走的那條路。",
+            features: ["任務拆解設計", "即時反饋機制", "品牌共創"],
             gradient: "from-amber-500 to-orange-500",
             glowColor: "245, 158, 11"
         },
@@ -27,7 +27,7 @@ export default function MethodologyCEO() {
             number: "03",
             title: "多渠道營運",
             subtitle: "口袋私域學",
-            description: "付費專屬的社群就像一個人身上有不同口袋，每個口袋的目的不同。我們公司把它取作「口袋私域學」，本質上就是協助品牌搭建多元且目標明確的私域社群矩陣，並將其社群內的用戶進行分析，針對細分用戶需求，訂定與執行群內營運活動。Bicome 除了協助 LINE 私域社群，也有服務 Discord、IG 廣播專區等多渠道的載體營運。",
+            description: "每個社群都是品牌的一個口袋，不同目的對應不同用戶分群。LINE、Discord、IG 廣播專區多載體矩陣營運。",
             features: ["LINE 私域社群", "Discord 社群", "IG 廣播專區"],
             gradient: "from-blue-500 to-indigo-500",
             glowColor: "59, 130, 246"
@@ -73,7 +73,7 @@ export default function MethodologyCEO() {
                                 </h3>
                                 <p className="text-sm text-gray-400 mb-4">{method.subtitle}</p>
 
-                                <p className="text-gray-600 leading-relaxed mb-6 text-sm line-clamp-4">
+                                <p className="text-gray-600 leading-relaxed mb-6 text-sm">
                                     {method.description}
                                 </p>
 

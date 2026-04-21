@@ -17,3 +17,6 @@
 *.log
 .DS_Store
 
+
+# Archived assets (not shipped)
+/.archive

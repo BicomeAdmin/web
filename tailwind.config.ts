@@ -31,9 +31,7 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', '"Noto Sans TC"', 'system-ui', 'sans-serif'],
-        serif: ['"Noto Serif TC"', 'Georgia', 'serif'],
         display: ['"Manrope"', 'Inter', '"Noto Sans TC"', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
       },
       animation: {
         'glow-pulse': 'glow-pulse 4s ease-in-out infinite',

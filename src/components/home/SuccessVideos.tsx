@@ -99,6 +99,7 @@ export default function SuccessVideos() {
                                     playsInline
                                     onEnded={handleVideoEnd}
                                     loop
+                                    preload="none"
                                 />
 
                                 {/* 播放按鈕覆蓋層 */}

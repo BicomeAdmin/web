@@ -57,8 +57,8 @@ export default function HeroCEO() {
 
                         {/* CTA 按鈕 */}
                         <div className="flex flex-wrap gap-4">
-                            <Link
-                                to="/contact"
+                            <a
+                                href="#team"
                                 className="group relative px-10 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold rounded-xl overflow-hidden shadow-2xl shadow-emerald-900/20 transition-all duration-300 hover:shadow-emerald-500/40 hover:-translate-y-1"
                             >
                                 <span className="relative z-10 flex items-center gap-2">
@@ -68,7 +68,7 @@ export default function HeroCEO() {
                                     </svg>
                                 </span>
                                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                            </Link>
+                            </a>
                         </div>
 
                         {/* 數據統計 */}

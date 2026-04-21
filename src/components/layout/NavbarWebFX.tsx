@@ -36,13 +36,13 @@ export default function NavbarWebFX() {
                 </div>
 
                 <div className="flex items-center space-x-6">
-                    <div className="hidden xl:block text-right">
+                    <a href="/contact" className="hidden xl:block text-right group">
                         <div className="text-[10px] font-bold text-webfx-navy/40 uppercase tracking-widest">立即諮詢</div>
-                        <div className="text-lg font-black text-webfx-navy">0800-XXX-XXX</div>
-                    </div>
-                    <button className="bg-webfx-blue text-white px-6 py-3 rounded-md text-sm font-black hover:bg-webfx-navy transition-all shadow-md">
+                        <div className="text-lg font-black text-webfx-navy group-hover:text-webfx-blue transition-colors">聯絡我們</div>
+                    </a>
+                    <a href="/contact" className="bg-webfx-blue text-white px-6 py-3 rounded-md text-sm font-black hover:bg-webfx-navy transition-all shadow-md">
                         取得免費成長方案
-                    </button>
+                    </a>
                 </div>
             </div>
         </nav>

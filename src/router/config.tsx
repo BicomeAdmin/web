@@ -1,6 +1,5 @@
 import type { RouteObject } from "react-router-dom";
 import NotFound from "../pages/NotFound";
-import Home from "../pages/home/page";
 import WebFXPage from "../pages/home/WebFXPage";
 import SignaturePage from "../pages/home/SignaturePage";
 import ConsultantPage from "../pages/home/ConsultantPage";
@@ -10,10 +9,6 @@ const routes: RouteObject[] = [
   {
     path: "/",
     element: <SignaturePage />,
-  },
-  {
-    path: "/old-home",
-    element: <Home />,
   },
   {
     path: "/webfx",

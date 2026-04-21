@@ -36,30 +36,37 @@ export default function HeroCEO() {
                         <div className="flex flex-wrap items-center gap-3">
                             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/[0.03] border border-white/10 rounded-full backdrop-blur-sm">
                                 <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
-                                <span className="text-sm font-medium text-emerald-400 tracking-wide">台灣領先的品牌用戶營運專家</span>
+                                <span className="text-sm font-medium text-emerald-400 tracking-wide">台灣領先的用戶營運顧問 × AI 系統商</span>
                             </div>
-                            <div className="hidden md:flex items-center gap-2 text-xs text-white/40">
-                                <span className="px-2 py-1 bg-blue-500/20 text-blue-400 rounded">數據驅動</span>
-                                <span className="px-2 py-1 bg-purple-500/20 text-purple-400 rounded">AI 賦能</span>
-                                <span className="px-2 py-1 bg-amber-500/20 text-amber-400 rounded">遊戲化營運</span>
+                            <div className="hidden md:flex items-center gap-2 text-xs">
+                                <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-emerald-500/15 text-emerald-300 rounded-md border border-emerald-500/30">
+                                    <i className="ri-sparkling-2-line" aria-hidden="true"></i> AI 智慧中心
+                                </span>
+                                <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-amber-500/15 text-amber-300 rounded-md border border-amber-500/30">
+                                    <i className="ri-gamepad-line" aria-hidden="true"></i> 用戶忠誠引擎
+                                </span>
+                                <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-teal-500/15 text-teal-300 rounded-md border border-teal-500/30">
+                                    <i className="ri-team-line" aria-hidden="true"></i> 私域陪跑
+                                </span>
                             </div>
                         </div>
 
                         {/* 主標題 */}
                         <div className="space-y-6">
                             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-black text-white leading-[1.05] tracking-tighter">
-                                <span className="block text-white/40 text-xl md:text-2xl lg:text-3xl font-bold mb-4 tracking-normal">數據驅動的私域營運方法論</span>
+                                <span className="block text-white/45 text-xl md:text-2xl lg:text-3xl font-bold mb-4 tracking-normal">
+                                    用戶營運 <span className="text-emerald-400/70">×</span> AI 系統
+                                </span>
                                 <span className="shimmer-text bg-gradient-to-r from-emerald-400 via-emerald-200 via-50% to-emerald-400 bg-clip-text text-transparent">
-                                    品牌KOC
+                                    品牌 KOC
                                 </span>
                                 <br />
-                                <span className="text-white">CLTV的增長引擎</span>
+                                <span className="text-white">CLTV 的增長引擎</span>
                             </h1>
 
-                            <p className="text-lg md:text-xl text-white/50 leading-relaxed max-w-xl">
-                                圍繞 <span className="text-emerald-400 font-semibold">#社群私域營運</span> 與
-                                <span className="text-emerald-400 font-semibold"> #社群私域數據</span>，
-                                協助品牌執行用戶關係構建，並孵化品牌 <span className="text-white font-bold">KOC</span>。
+                            <p className="text-lg md:text-xl text-white/55 leading-relaxed max-w-xl">
+                                把{' '}<span className="text-emerald-400 font-semibold">社群私域營運</span>{' '}與{' '}
+                                <span className="text-emerald-400 font-semibold">AI 數據系統</span>{' '}接在一起，協助品牌自動化培育用戶關係、孵化 <span className="text-white font-bold">KOC</span>，把一次性流量變成可重複獲利的資產。
                             </p>
                         </div>
 

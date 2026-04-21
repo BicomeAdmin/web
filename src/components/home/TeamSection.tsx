@@ -30,7 +30,7 @@ const teamMembers = [
 
 export default function TeamSection() {
     return (
-        <section id="team" className="relative py-24 md:py-32 bg-gradient-to-b from-[#020617] via-[#0a1f1a] to-[#020617] text-white overflow-hidden">
+        <section id="team" className="relative py-24 md:py-32 bg-gradient-to-b from-brand-ink via-brand-inkSoft to-brand-ink text-white overflow-hidden">
             {/* 柔光 */}
             <div className="absolute inset-0 pointer-events-none">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-emerald-500/10 rounded-full blur-[120px]" />

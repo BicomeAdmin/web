@@ -52,7 +52,7 @@ export default function CoreServices() {
         <section id="services" className="relative py-32 bg-gray-50 overflow-hidden">
 
             {/* 視覺過渡：頂部深色自然銜接 */}
-            <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-[#0a0f1a] to-gray-50 pointer-events-none opacity-10" />
+            <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-brand-ink to-gray-50 pointer-events-none opacity-10" />
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
                 {/* 標題系統 - 現代菁英風 */}

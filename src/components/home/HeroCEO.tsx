@@ -1,6 +1,6 @@
 export default function HeroCEO() {
     return (
-        <section className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-gradient-to-br from-[#0a1f1a] via-[#020617] to-[#0a0f1a]">
+        <section className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-gradient-to-br from-brand-inkSoft via-brand-ink to-brand-ink">
             {/* 背景光暈效果 */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 {/* 主光暈 - Bicome 綠 */}
@@ -112,7 +112,7 @@ export default function HeroCEO() {
                             </div>
 
                             {/* 浮動卡片 - 成長數據 */}
-                            <div className="absolute -left-6 bottom-16 bg-[#0a1f1a]/90 backdrop-blur-xl rounded-xl shadow-[0_0_30px_rgba(16,185,129,0.2)] p-4 border border-emerald-500/20">
+                            <div className="absolute -left-6 bottom-16 bg-brand-inkSoft/90 backdrop-blur-xl rounded-xl shadow-[0_0_30px_rgba(16,185,129,0.2)] p-4 border border-emerald-500/20">
                                 <div className="flex items-center gap-3">
                                     <div className="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center">
                                         <svg className="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -127,7 +127,7 @@ export default function HeroCEO() {
                             </div>
 
                             {/* 浮動卡片 - LINE 社群 */}
-                            <div className="absolute -right-4 top-16 bg-[#0a1f1a]/90 backdrop-blur-xl rounded-xl shadow-[0_0_30px_rgba(16,185,129,0.2)] p-4 border border-emerald-500/20">
+                            <div className="absolute -right-4 top-16 bg-brand-inkSoft/90 backdrop-blur-xl rounded-xl shadow-[0_0_30px_rgba(16,185,129,0.2)] p-4 border border-emerald-500/20">
                                 <div className="flex items-center gap-3">
                                     <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
                                         <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">

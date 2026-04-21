@@ -7,6 +7,7 @@ import PrivateDomainFramework from '../../components/home/PrivateDomainFramework
 import SuccessVideos from '../../components/home/SuccessVideos';
 import CulturePillars from '../../components/home/CulturePillars';
 import BicomeCloudFX from '../../components/home/BicomeCloudFX';
+import TeamSection from '../../components/home/TeamSection';
 import Footer from '../../components/layout/Footer';
 
 export default function SignaturePage() {
@@ -39,6 +40,9 @@ export default function SignaturePage() {
 
                 {/* 6. Technological Authority (深色) */}
                 <BicomeCloudFX />
+
+                {/* 7. Meet the Team / Contact CTA */}
+                <TeamSection />
             </main>
 
             <Footer />

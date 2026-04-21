@@ -7,26 +7,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#000000",
-        secondary: "#111111",
-        accent: "#22C55E",
-        highlight: "#10b981",
-        // v11.0 頂級代理商配色
-        elite: {
-          dark: "#020617",      // 深邃黑
-          darker: "#0a0f1a",    // 極深藍黑
-          green: "#10b981",     // Bicome 綠（霓虹）
-          greenGlow: "rgba(16, 185, 129, 0.3)",
-          gold: "#f59e0b",      // 高光金
-          pink: "#ff0092",      // 霓虹粉（CTA）
-          glass: "rgba(255, 255, 255, 0.05)",
-          glassBorder: "rgba(255, 255, 255, 0.1)",
-        },
-        signature: {
-          indigo: "#020617",
-          aurora: "#10b981",
-          insight: "#f59e0b",
-          glass: "rgba(255, 255, 255, 0.03)"
+        // Bicome Brand Tokens
+        brand: {
+          ink: "#020617",        // 深邃墨藍（主背景）
+          inkSoft: "#0a1f1a",    // 墨藍帶綠（段落漸層）
+          emerald: "#10b981",    // Bicome 綠（主強調）
+          teal: "#14b8a6",       // 輔助藍綠
+          gold: "#f59e0b",       // 高光金（次要強調）
+          pink: "#ff0092",       // 霓虹粉（特殊 CTA，使用節制）
         },
       },
       fontFamily: {

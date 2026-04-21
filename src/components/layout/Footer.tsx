@@ -122,9 +122,9 @@ export default function Footer() {
                         {/* 快速聯繫 */}
                         <div className="col-span-2 sm:col-span-1">
                             <h4 className="font-display font-bold text-sm text-white/90 mb-6 uppercase tracking-widest">預約諮詢</h4>
-                            <Link to="/contact" className="inline-block px-5 py-2.5 bg-emerald-500/10 border border-emerald-500/20 rounded-xl text-emerald-400 text-sm font-bold hover:bg-emerald-500 hover:text-white transition-all duration-300">
+                            <a href="#team" className="inline-block px-5 py-2.5 bg-emerald-500/10 border border-emerald-500/20 rounded-xl text-emerald-400 text-sm font-bold hover:bg-emerald-500 hover:text-white transition-all duration-300">
                                 免費初步診斷
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>

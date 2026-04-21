@@ -8,7 +8,7 @@ export default function NavbarSignature() {
         { label: "核心服務", href: "#services" },
         { label: "成功案例", href: "#cases" },
         { label: "方法論", href: "#methodology" },
-        { label: "關於我們", href: "#about" },
+        { label: "團隊", href: "#team" },
     ];
 
     return (
@@ -41,12 +41,12 @@ export default function NavbarSignature() {
                         <button className="px-4 py-2 bg-amber-500 text-white text-sm font-bold rounded-lg hover:bg-amber-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(245,158,11,0.4)]">
                             用戶忠誠系統
                         </button>
-                        <Link
-                            to="/contact"
+                        <a
+                            href="#team"
                             className="px-4 py-2 bg-emerald-500 text-white text-sm font-bold rounded-lg hover:bg-emerald-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.4)]"
                         >
                             免費諮詢
-                        </Link>
+                        </a>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -82,13 +82,13 @@ export default function NavbarSignature() {
                                 <button className="w-full px-4 py-3 bg-amber-500 text-white font-bold rounded-lg hover:bg-amber-400 transition-colors">
                                     用戶忠誠系統
                                 </button>
-                                <Link
-                                    to="/contact"
+                                <a
+                                    href="#team"
                                     className="w-full px-4 py-3 bg-emerald-500 text-white font-bold rounded-lg hover:bg-emerald-400 transition-colors text-center"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     免費諮詢
-                                </Link>
+                                </a>
                             </div>
                         </div>
                     </div>

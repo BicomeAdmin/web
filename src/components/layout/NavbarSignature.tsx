@@ -1,15 +1,18 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function NavbarSignature() {
+    const { t } = useTranslation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navItems = [
-        { label: "核心服務", href: "#services" },
-        { label: "成功案例", href: "#cases" },
-        { label: "用戶忠誠", href: "#loyalty" },
-        { label: "方法論", href: "#methodology" },
-        { label: "團隊", href: "#team" },
+        { key: 'nav.services', href: '#services' },
+        { key: 'nav.cases', href: '#cases' },
+        { key: 'nav.loyalty', href: '#loyalty' },
+        { key: 'nav.methodology', href: '#methodology' },
+        { key: 'nav.team', href: '#team' },
     ];
 
     return (
@@ -25,70 +28,75 @@ export default function NavbarSignature() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center gap-8">
+                    <div className="hidden lg:flex items-center gap-7 xl:gap-8">
                         {navItems.map((item) => (
                             <a
-                                key={item.label}
+                                key={item.key}
                                 href={item.href}
-                                className="text-white/60 hover:text-emerald-400 font-medium transition-colors duration-300"
+                                className="text-white/60 hover:text-emerald-400 font-medium transition-colors duration-300 whitespace-nowrap"
                             >
-                                {item.label}
+                                {t(item.key)}
                             </a>
                         ))}
                     </div>
 
                     {/* Right Actions */}
-                    <div className="hidden md:flex items-center gap-4">
-                        <a href="#loyalty" className="px-4 py-2 bg-amber-500 text-white text-sm font-bold rounded-lg hover:bg-amber-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(245,158,11,0.4)]">
-                            用戶忠誠系統
+                    <div className="hidden lg:flex items-center gap-3">
+                        <LanguageSwitcher variant="dark" />
+                        <a href="#loyalty" className="px-4 py-2 bg-amber-500 text-white text-sm font-bold rounded-lg hover:bg-amber-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(245,158,11,0.4)] whitespace-nowrap">
+                            {t('nav.loyaltyProduct')}
                         </a>
                         <a
                             href="#team"
-                            className="px-4 py-2 bg-emerald-500 text-white text-sm font-bold rounded-lg hover:bg-emerald-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.4)]"
+                            className="px-4 py-2 bg-emerald-500 text-white text-sm font-bold rounded-lg hover:bg-emerald-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] whitespace-nowrap"
                         >
-                            免費諮詢
+                            {t('nav.freeConsult')}
                         </a>
                     </div>
 
-                    {/* Mobile Menu Button */}
-                    <button
-                        className="md:hidden p-2"
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    >
-                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            {isMenuOpen ? (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                            ) : (
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                            )}
-                        </svg>
-                    </button>
+                    {/* Mobile: Language + Menu button */}
+                    <div className="flex items-center gap-2 lg:hidden">
+                        <LanguageSwitcher variant="dark" />
+                        <button
+                            className="p-2"
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            aria-label="選單"
+                        >
+                            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                {isMenuOpen ? (
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                ) : (
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                                )}
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
                 {/* Mobile Menu */}
                 {isMenuOpen && (
-                    <div className="md:hidden py-4 border-t border-white/10">
+                    <div className="lg:hidden py-4 border-t border-white/10">
                         <div className="flex flex-col gap-4">
                             {navItems.map((item) => (
                                 <a
-                                    key={item.label}
+                                    key={item.key}
                                     href={item.href}
                                     className="text-white/60 hover:text-emerald-400 font-medium py-2"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
-                                    {item.label}
+                                    {t(item.key)}
                                 </a>
                             ))}
                             <div className="flex flex-col gap-2 mt-4">
                                 <a href="#loyalty" onClick={() => setIsMenuOpen(false)} className="w-full px-4 py-3 bg-amber-500 text-white font-bold rounded-lg hover:bg-amber-400 transition-colors text-center">
-                                    用戶忠誠系統
+                                    {t('nav.loyaltyProduct')}
                                 </a>
                                 <a
                                     href="#team"
                                     className="w-full px-4 py-3 bg-emerald-500 text-white font-bold rounded-lg hover:bg-emerald-400 transition-colors text-center"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
-                                    免費諮詢
+                                    {t('nav.freeConsult')}
                                 </a>
                             </div>
                         </div>

@@ -1,7 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import { useCountUp } from '../../hooks/useCountUp';
 import { useMagnetic } from '../../hooks/useMagnetic';
 
 export default function HeroCEO() {
+    const { t } = useTranslation();
     const brandsCount = useCountUp(300, { duration: 1600 });
     const reachCount = useCountUp(50, { duration: 1800 });
     const satCount = useCountUp(90, { duration: 2000 });
@@ -36,17 +38,17 @@ export default function HeroCEO() {
                         <div className="flex flex-wrap items-center gap-3">
                             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/[0.03] border border-white/10 rounded-full backdrop-blur-sm">
                                 <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
-                                <span className="text-sm font-medium text-emerald-400 tracking-wide">台灣領先的用戶營運顧問 × AI 系統商</span>
+                                <span className="text-sm font-medium text-emerald-400 tracking-wide">{t('hero.badge')}</span>
                             </div>
                             <div className="hidden md:flex items-center gap-2 text-xs">
                                 <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-emerald-500/15 text-emerald-300 rounded-md border border-emerald-500/30">
-                                    <i className="ri-sparkling-2-line" aria-hidden="true"></i> AI 智慧中心
+                                    <i className="ri-sparkling-2-line" aria-hidden="true"></i> {t('hero.pill.ai')}
                                 </span>
                                 <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-amber-500/15 text-amber-300 rounded-md border border-amber-500/30">
-                                    <i className="ri-gamepad-line" aria-hidden="true"></i> 用戶忠誠引擎
+                                    <i className="ri-gamepad-line" aria-hidden="true"></i> {t('hero.pill.loyalty')}
                                 </span>
                                 <span className="inline-flex items-center gap-1 px-2.5 py-1 bg-teal-500/15 text-teal-300 rounded-md border border-teal-500/30">
-                                    <i className="ri-team-line" aria-hidden="true"></i> 私域陪跑
+                                    <i className="ri-team-line" aria-hidden="true"></i> {t('hero.pill.advisory')}
                                 </span>
                             </div>
                         </div>
@@ -55,18 +57,17 @@ export default function HeroCEO() {
                         <div className="space-y-6">
                             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-black text-white leading-[1.05] tracking-tighter">
                                 <span className="block text-white/45 text-xl md:text-2xl lg:text-3xl font-bold mb-4 tracking-normal">
-                                    用戶營運 <span className="text-emerald-400/70">×</span> AI 系統
+                                    {t('hero.preTitle')}
                                 </span>
                                 <span className="shimmer-text bg-gradient-to-r from-emerald-400 via-emerald-200 via-50% to-emerald-400 bg-clip-text text-transparent">
-                                    品牌 KOC
+                                    {t('hero.titleA')}
                                 </span>
                                 <br />
-                                <span className="text-white">CLTV 的增長引擎</span>
+                                <span className="text-white">{t('hero.titleB')}</span>
                             </h1>
 
                             <p className="text-lg md:text-xl text-white/55 leading-relaxed max-w-xl">
-                                把{' '}<span className="text-emerald-400 font-semibold">社群私域營運</span>{' '}與{' '}
-                                <span className="text-emerald-400 font-semibold">AI 數據系統</span>{' '}接在一起，協助品牌自動化培育用戶關係、孵化 <span className="text-white font-bold">KOC</span>，把一次性流量變成可重複獲利的資產。
+                                {t('hero.sub')}
                             </p>
                         </div>
 
@@ -78,7 +79,7 @@ export default function HeroCEO() {
                                 className="group relative px-10 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold rounded-xl overflow-hidden shadow-2xl shadow-emerald-900/20 transition-shadow duration-300 hover:shadow-emerald-500/40 will-change-transform"
                             >
                                 <span className="relative z-10 flex items-center gap-2">
-                                    免費諮詢
+                                    {t('hero.cta')}
                                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8" />
                                     </svg>
@@ -94,22 +95,22 @@ export default function HeroCEO() {
                                     <div className="text-3xl md:text-4xl font-display font-extrabold text-white tabular-nums">
                                         {brandsCount}<span className="text-emerald-400">+</span>
                                     </div>
-                                    <div className="text-sm text-white/40">品牌客戶</div>
+                                    <div className="text-sm text-white/40">{t('hero.stats.brands')}</div>
                                 </div>
                                 <div className="space-y-1">
                                     <div className="text-3xl md:text-4xl font-display font-extrabold text-white tabular-nums">
                                         {reachCount}<span className="text-amber-400">M</span>
                                     </div>
-                                    <div className="text-sm text-white/40">用戶觸及</div>
+                                    <div className="text-sm text-white/40">{t('hero.stats.reach')}</div>
                                 </div>
                                 <div className="space-y-1">
                                     <div className="text-3xl md:text-4xl font-display font-extrabold text-white tabular-nums">
                                         {satCount}<span className="text-emerald-400">%</span>
                                     </div>
-                                    <div className="text-sm text-white/40">客戶滿意度</div>
+                                    <div className="text-sm text-white/40">{t('hero.stats.satisfaction')}</div>
                                 </div>
                             </div>
-                            <div className="mt-4 text-[10px] text-white/25">*根據 Bicome 2025 年度數據統計</div>
+                            <div className="mt-4 text-[10px] text-white/25">{t('hero.stats.footnote')}</div>
                         </div>
                     </div>
 
@@ -151,9 +152,9 @@ export default function HeroCEO() {
                                         <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-emerald-400" />
                                     </div>
                                     <div>
-                                        <div className="text-[10px] text-emerald-400 font-bold tracking-[0.2em] uppercase mb-0.5">AI 判讀中</div>
-                                        <div className="text-base font-display font-extrabold text-white leading-tight">行為 × 流失 × 任務</div>
-                                        <div className="text-[11px] text-white/45">自動推薦、即時預警</div>
+                                        <div className="text-[10px] text-emerald-400 font-bold tracking-[0.2em] uppercase mb-0.5">{t('hero.aiCard.label')}</div>
+                                        <div className="text-base font-display font-extrabold text-white leading-tight">{t('hero.aiCard.title')}</div>
+                                        <div className="text-[11px] text-white/45">{t('hero.aiCard.desc')}</div>
                                     </div>
                                 </div>
                             </div>
@@ -167,8 +168,8 @@ export default function HeroCEO() {
                                         </svg>
                                     </div>
                                     <div>
-                                        <div className="text-lg font-bold text-white">LINE 社群</div>
-                                        <div className="text-xs text-white/50">私域營運專家</div>
+                                        <div className="text-lg font-bold text-white">{t('hero.lineCard.title')}</div>
+                                        <div className="text-xs text-white/50">{t('hero.lineCard.desc')}</div>
                                     </div>
                                 </div>
                             </div>

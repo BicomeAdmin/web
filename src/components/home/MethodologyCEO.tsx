@@ -1,4 +1,9 @@
+import { useInView } from '../../hooks/useInView';
+
 export default function MethodologyCEO() {
+    const grid = useInView<HTMLDivElement>();
+    const cta = useInView<HTMLDivElement>();
+
     const methodologies = [
         {
             number: "01",
@@ -40,7 +45,7 @@ export default function MethodologyCEO() {
                 </div>
 
                 {/* 方法論卡片 */}
-                <div className="grid md:grid-cols-3 gap-8">
+                <div ref={grid.ref} data-reveal={grid.visible ? 'in' : 'out'} className="reveal-parent grid md:grid-cols-3 gap-8">
                     {methodologies.map((method) => (
                         <div
                             key={method.number}
@@ -85,7 +90,7 @@ export default function MethodologyCEO() {
                 </div>
 
                 {/* 流程示意 */}
-                <div className="mt-16 bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 md:p-12 text-white">
+                <div ref={cta.ref} className={`mt-16 bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 md:p-12 text-white transition-all duration-700 ${cta.visible ? 'reveal-in' : 'reveal-init'}`}>
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                         <div className="flex items-center gap-4">
                             <div className="w-14 h-14 bg-emerald-500/20 rounded-full flex items-center justify-center">

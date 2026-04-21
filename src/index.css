@@ -21,6 +21,74 @@
   .tracking-cjk {
     letter-spacing: 0.02em;
   }
+
+  /* Scroll reveal 系統：初始 hidden、加 .reveal-in 進場 */
+  .reveal-init {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+                transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+  .reveal-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* 水平延伸動畫：用在 accent line、underline reveal */
+  .reveal-line-init {
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal-line-in {
+    transform: scaleX(1);
+  }
+
+  /* Shimmer：漸層文字微微光澤 */
+  .shimmer-text {
+    background-size: 200% auto;
+    animation: shimmer-slide 6s linear infinite;
+  }
+
+  /* Aurora 背景：緩慢漂移的柔光，給深色 section 用 */
+  .aurora-layer {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(60% 60% at 20% 20%, rgba(16, 185, 129, 0.12), transparent 60%),
+                radial-gradient(50% 50% at 80% 70%, rgba(20, 184, 166, 0.10), transparent 55%),
+                radial-gradient(40% 40% at 50% 100%, rgba(245, 158, 11, 0.05), transparent 60%);
+    animation: aurora-drift 18s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+
+  @keyframes shimmer-slide {
+    from { background-position: -150% 0; }
+    to   { background-position: 250% 0; }
+  }
+
+  @keyframes aurora-drift {
+    0%   { transform: translate3d(0, 0, 0) scale(1); }
+    100% { transform: translate3d(-3%, 2%, 0) scale(1.05); }
+  }
+}
+
+/* Scroll reveal stagger 子元素（父層套 .reveal-parent） */
+.reveal-parent[data-reveal="in"] > * {
+  animation: reveal-stagger-up 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.reveal-parent[data-reveal="in"] > *:nth-child(1) { animation-delay: 0ms; }
+.reveal-parent[data-reveal="in"] > *:nth-child(2) { animation-delay: 80ms; }
+.reveal-parent[data-reveal="in"] > *:nth-child(3) { animation-delay: 160ms; }
+.reveal-parent[data-reveal="in"] > *:nth-child(4) { animation-delay: 240ms; }
+.reveal-parent[data-reveal="in"] > *:nth-child(5) { animation-delay: 320ms; }
+.reveal-parent[data-reveal="in"] > *:nth-child(6) { animation-delay: 400ms; }
+.reveal-parent[data-reveal="in"] > *:nth-child(7) { animation-delay: 480ms; }
+.reveal-parent[data-reveal="in"] > *:nth-child(8) { animation-delay: 560ms; }
+
+@keyframes reveal-stagger-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 /* Accessibility: honor user motion preference across the site. */

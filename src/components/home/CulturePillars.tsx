@@ -1,4 +1,8 @@
+import { useInView } from '../../hooks/useInView';
+
 export default function CulturePillars() {
+    const grid = useInView<HTMLDivElement>();
+
     const values = [
         {
             icon: "ri-team-line",
@@ -78,7 +82,7 @@ export default function CulturePillars() {
                     </div>
 
                     {/* 右側 - 核心價值卡片 */}
-                    <div className="space-y-6">
+                    <div ref={grid.ref} data-reveal={grid.visible ? 'in' : 'out'} className="reveal-parent space-y-6">
                         {values.map((value, index) => (
                             <div
                                 key={index}

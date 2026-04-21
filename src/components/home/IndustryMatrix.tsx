@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useInView } from '../../hooks/useInView';
 
 export default function IndustryMatrix() {
     const [activeCategory, setActiveCategory] = useState('精選');
+    const grid = useInView<HTMLDivElement>();
 
     const categories = [
         { id: '精選', label: '精選案例', icon: 'ri-star-smile-line' },
@@ -22,7 +24,7 @@ export default function IndustryMatrix() {
             tags: "#悠活原力 #保健 #營養",
             icon: "🌿",
             bgColor: "bg-[#d78b4b]",
-            categories: ["精選", "食"],
+            categories: ["食"],
             link: "https://line.me/ti/g2/9ykCo-wnrVd1Ybb1jv5okCWI81wXongsW_hjdQ?utm_source=invitation&utm_medium=link_copy&utm_campaign=default",
             image: "/images/cases/yoho_power.jpg"
         },
@@ -136,7 +138,7 @@ export default function IndustryMatrix() {
             tags: "#教育 #國中數學 #高中數學",
             icon: "🔢",
             bgColor: "bg-[#f59e0b]",
-            categories: ["育"],
+            categories: ["精選", "育"],
             link: "https://line.me/ti/g2/Q9R-Hmz3iMW0pt6kFMnGD37VESDH7VEe32zhoA?utm_source=invitation&utm_medium=link_copy&utm_campaign=default",
             image: "/images/cases/nanama_math.jpg"
         },
@@ -218,7 +220,7 @@ export default function IndustryMatrix() {
                 </div>
 
                 {/* 案例卡片網格 */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div ref={grid.ref} data-reveal={grid.visible ? 'in' : 'out'} className="reveal-parent grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {filteredCases.map((caseItem: any, index) => (
                         <div
                             key={index}

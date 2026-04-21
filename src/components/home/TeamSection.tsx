@@ -1,3 +1,5 @@
+import { useInView } from '../../hooks/useInView';
+
 const teamMembers = [
     {
         name: "Paul",
@@ -29,6 +31,8 @@ const teamMembers = [
 ];
 
 export default function TeamSection() {
+    const grid = useInView<HTMLDivElement>();
+    const cta = useInView<HTMLDivElement>();
     return (
         <section id="team" className="relative py-24 md:py-32 bg-gradient-to-b from-[#020617] via-[#0a1f1a] to-[#020617] text-white overflow-hidden">
             {/* 柔光 */}
@@ -54,7 +58,7 @@ export default function TeamSection() {
                 </div>
 
                 {/* 團隊卡片 */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch mb-16">
+                <div ref={grid.ref} data-reveal={grid.visible ? 'in' : 'out'} className="reveal-parent grid md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch mb-16">
                     {teamMembers.map((member) => (
                         <article
                             key={member.name}
@@ -105,7 +109,7 @@ export default function TeamSection() {
                 </div>
 
                 {/* LINE 官方帳號 CTA */}
-                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 p-8 md:p-12 text-center">
+                <div ref={cta.ref} className={`relative overflow-hidden rounded-3xl bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-500 p-8 md:p-12 text-center ${cta.visible ? 'reveal-in' : 'reveal-init'}`}>
                     <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
                     <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-48 h-48 bg-white/10 rounded-full blur-3xl" />
 

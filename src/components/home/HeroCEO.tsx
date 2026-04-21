@@ -1,11 +1,20 @@
+import { useCountUp } from '../../hooks/useCountUp';
+
 export default function HeroCEO() {
+    const brandsCount = useCountUp(300, { duration: 1600 });
+    const reachCount = useCountUp(50, { duration: 1800 });
+    const satCount = useCountUp(90, { duration: 2000 });
+
     return (
         <section className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-gradient-to-br from-[#0a1f1a] via-[#020617] to-[#020617]">
-            {/* 背景光暈效果 */}
+            {/* 背景光暈 × Aurora 漂移 */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 {/* 主光暈 - Bicome 綠 */}
                 <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-emerald-500/20 rounded-full blur-[150px] animate-glow-pulse" />
                 <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-emerald-600/15 rounded-full blur-[180px] animate-glow-pulse" style={{ animationDelay: '2s' }} />
+
+                {/* Aurora 緩慢漂移 */}
+                <div className="aurora-layer" />
 
                 {/* 網格背景 */}
                 <div
@@ -15,9 +24,6 @@ export default function HeroCEO() {
                         backgroundSize: '60px 60px'
                     }}
                 />
-
-                {/* 噪點紋理 */}
-                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.15] mix-blend-soft-light" />
             </div>
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full relative z-10">
@@ -41,7 +47,7 @@ export default function HeroCEO() {
                         <div className="space-y-6">
                             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-black text-white leading-[1.05] tracking-tighter">
                                 <span className="block text-white/40 text-xl md:text-2xl lg:text-3xl font-bold mb-4 tracking-normal">數據驅動的私域營運方法論</span>
-                                <span className="bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-500 bg-clip-text text-transparent">
+                                <span className="shimmer-text bg-gradient-to-r from-emerald-400 via-emerald-200 via-50% to-emerald-400 bg-clip-text text-transparent">
                                     品牌KOC
                                 </span>
                                 <br />
@@ -71,24 +77,24 @@ export default function HeroCEO() {
                             </a>
                         </div>
 
-                        {/* 數據統計 */}
+                        {/* 數據統計 — 進場 count-up */}
                         <div className="pt-8 border-t border-white/10">
                             <div className="grid grid-cols-3 gap-8">
                                 <div className="space-y-1">
-                                    <div className="text-3xl md:text-4xl font-display font-extrabold text-white">
-                                        300<span className="text-emerald-400">+</span>
+                                    <div className="text-3xl md:text-4xl font-display font-extrabold text-white tabular-nums">
+                                        {brandsCount}<span className="text-emerald-400">+</span>
                                     </div>
                                     <div className="text-sm text-white/40">品牌客戶</div>
                                 </div>
                                 <div className="space-y-1">
-                                    <div className="text-3xl md:text-4xl font-display font-extrabold text-white">
-                                        50<span className="text-amber-400">M</span>
+                                    <div className="text-3xl md:text-4xl font-display font-extrabold text-white tabular-nums">
+                                        {reachCount}<span className="text-amber-400">M</span>
                                     </div>
                                     <div className="text-sm text-white/40">用戶觸及</div>
                                 </div>
                                 <div className="space-y-1">
-                                    <div className="text-3xl md:text-4xl font-display font-extrabold text-white">
-                                        90<span className="text-emerald-400">%</span>
+                                    <div className="text-3xl md:text-4xl font-display font-extrabold text-white tabular-nums">
+                                        {satCount}<span className="text-emerald-400">%</span>
                                     </div>
                                     <div className="text-sm text-white/40">客戶滿意度</div>
                                 </div>
@@ -99,7 +105,14 @@ export default function HeroCEO() {
 
                     {/* 右側視覺 */}
                     <div className="relative hidden lg:block">
-                        <div className="relative">
+                        <div
+                            className="group/spot relative"
+                            onMouseMove={(e) => {
+                                const r = e.currentTarget.getBoundingClientRect();
+                                e.currentTarget.style.setProperty('--mx', `${e.clientX - r.left}px`);
+                                e.currentTarget.style.setProperty('--my', `${e.clientY - r.top}px`);
+                            }}
+                        >
                             {/* 主圖容器 - 玻璃擬態 */}
                             <div className="relative rounded-2xl overflow-hidden bg-white/[0.03] border border-white/10 backdrop-blur-sm p-2 shadow-[0_0_60px_rgba(16,185,129,0.15)]">
                                 <img
@@ -109,6 +122,14 @@ export default function HeroCEO() {
                                 />
                                 {/* 邊緣光暈 */}
                                 <div className="absolute inset-0 rounded-xl ring-1 ring-white/10" />
+                                {/* 滑鼠跟隨 Spotlight（lg+ 才有） */}
+                                <div
+                                    className="absolute inset-0 pointer-events-none opacity-0 group-hover/spot:opacity-100 transition-opacity duration-500 rounded-xl"
+                                    style={{
+                                        background: 'radial-gradient(220px circle at var(--mx, 50%) var(--my, 50%), rgba(16,185,129,0.22), transparent 60%)',
+                                        mixBlendMode: 'screen',
+                                    }}
+                                />
                             </div>
 
                             {/* 浮動卡片 - 成長數據 */}

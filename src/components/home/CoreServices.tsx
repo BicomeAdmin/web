@@ -1,4 +1,8 @@
+import { useInView } from '../../hooks/useInView';
+
 export default function CoreServices() {
+    const grid = useInView<HTMLDivElement>();
+
     const services = [
         {
             id: 'ops',
@@ -74,7 +78,7 @@ export default function CoreServices() {
                 </div>
 
                 {/* 雙核心板塊 - 雜誌級排版 */}
-                <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                <div ref={grid.ref} data-reveal={grid.visible ? 'in' : 'out'} className="reveal-parent grid lg:grid-cols-2 gap-8 lg:gap-12">
                     {services.map((service, index) => (
                         <div
                             key={service.id}

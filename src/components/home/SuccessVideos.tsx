@@ -1,6 +1,8 @@
 import { useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function SuccessVideos() {
+    const { t } = useTranslation();
     const [playingIndex, setPlayingIndex] = useState<number | null>(null);
     const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
@@ -70,16 +72,16 @@ export default function SuccessVideos() {
                             <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" />
                             </svg>
-                            <span className="text-[17px] font-extrabold tracking-tight">追蹤 @paul_bicome</span>
+                            <span className="text-[17px] font-extrabold tracking-tight">{t('videos.follow')}</span>
                         </a>
                     </div>
 
                     <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-50 text-emerald-700 text-[11px] font-bold rounded-full mb-5 border border-emerald-200/60 uppercase tracking-[0.3em]">
                         <i className="ri-live-line" aria-hidden="true"></i>
-                        Field Notes
+                        {t('videos.badge')}
                     </span>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-gray-900 tracking-tighter">
-                        操盤實戰經驗分享
+                        {t('videos.title')}
                     </h2>
                 </div>
 
@@ -185,10 +187,10 @@ export default function SuccessVideos() {
 
                             <div className="text-white">
                                 <h3 className="text-lg md:text-xl font-bold">
-                                    加入 LINE 社群
+                                    {t('videos.line.title')}
                                 </h3>
                                 <p className="text-sm text-white/80">
-                                    Bicome，您的私域顧問 · 與 500+ 品牌主以及行銷與營運專家交流
+                                    {t('videos.line.desc')}
                                 </p>
                             </div>
                         </div>
@@ -199,7 +201,7 @@ export default function SuccessVideos() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#06C755] font-bold rounded-full hover:bg-white/90 transition-all hover:scale-105 shadow-lg whitespace-nowrap"
                         >
-                            立即加入
+                            {t('videos.line.cta')}
                         </a>
                     </div>
                 </div>

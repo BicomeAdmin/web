@@ -1,18 +1,20 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useInView } from '../../hooks/useInView';
 
 export default function IndustryMatrix() {
+    const { t } = useTranslation();
     const [activeCategory, setActiveCategory] = useState('精選');
     const grid = useInView<HTMLDivElement>();
 
     const categories = [
-        { id: '精選', label: '精選案例', icon: 'ri-star-smile-line' },
-        { id: '食', label: '餐飲美食', icon: 'ri-restaurant-2-line' },
-        { id: '衣', label: '時尚服飾', icon: 'ri-t-shirt-line' },
-        { id: '住', label: '居家房產', icon: 'ri-home-4-line' },
-        { id: '育', label: '教育培訓', icon: 'ri-book-open-line' },
-        { id: '樂', label: '休閒娛樂', icon: 'ri-gamepad-line' },
-        { id: '生', label: '生活風格', icon: 'ri-leaf-line' },
+        { id: '精選', i18n: 'cases.cat.featured', icon: 'ri-star-smile-line' },
+        { id: '食', i18n: 'cases.cat.food', icon: 'ri-restaurant-2-line' },
+        { id: '衣', i18n: 'cases.cat.fashion', icon: 'ri-t-shirt-line' },
+        { id: '住', i18n: 'cases.cat.home', icon: 'ri-home-4-line' },
+        { id: '育', i18n: 'cases.cat.edu', icon: 'ri-book-open-line' },
+        { id: '樂', i18n: 'cases.cat.leisure', icon: 'ri-gamepad-line' },
+        { id: '生', i18n: 'cases.cat.life', icon: 'ri-leaf-line' },
     ];
 
     const cases = [
@@ -199,10 +201,10 @@ export default function IndustryMatrix() {
                 <div className="text-center max-w-3xl mx-auto mb-12">
                     <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-50 text-emerald-700 text-[11px] font-bold rounded-full mb-5 border border-emerald-200/60 uppercase tracking-[0.3em]">
                         <i className="ri-community-line" aria-hidden="true"></i>
-                        Success Stories
+                        {t('cases.badge')}
                     </span>
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-gray-900 mb-6 tracking-tighter">
-                        真實社群的成功故事
+                        {t('cases.title')}
                     </h2>
                 </div>
 
@@ -222,7 +224,7 @@ export default function IndustryMatrix() {
                                 }`}
                             >
                                 <i className={`${cat.icon} text-lg ${isActive ? 'text-emerald-300' : ''}`} aria-hidden="true"></i>
-                                <span>{cat.label}</span>
+                                <span>{t(cat.i18n)}</span>
                                 {isActive && (
                                     <span className="absolute left-1/2 -bottom-2 -translate-x-1/2 w-8 h-[3px] rounded-full bg-gradient-to-r from-emerald-400 to-teal-400" />
                                 )}
@@ -275,7 +277,7 @@ export default function IndustryMatrix() {
 
                                 {/* 描述與數據 */}
                                 <p className="text-base font-medium text-white/95 mb-3 drop-shadow">{caseItem.subtitle}</p>
-                                <p className="text-sm text-white/90 mb-2 drop-shadow-sm font-light">成員 {caseItem.memberCount.toLocaleString()}</p>
+                                <p className="text-sm text-white/90 mb-2 drop-shadow-sm font-light">{t('cases.members')} {caseItem.memberCount.toLocaleString()}</p>
                                 <p className="text-xs text-white/80 mb-8 opacity-80">{caseItem.tags}</p>
 
                                 {/* LINE 開啟按鈕 */}
@@ -286,14 +288,14 @@ export default function IndustryMatrix() {
                                         rel="noopener noreferrer"
                                         className="px-8 py-3 bg-white/20 backdrop-blur-md border border-white/50 rounded-full text-white font-bold text-sm flex items-center gap-2 hover:bg-[#06C755] hover:border-[#06C755] hover:shadow-lg transition-all duration-300 group-hover:scale-105"
                                     >
-                                        <span>以LINE開啟</span>
+                                        <span>{t('cases.openLine')}</span>
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                         </svg>
                                     </a>
                                 ) : (
                                     <button className="px-8 py-3 bg-white/20 backdrop-blur-md border border-white/50 rounded-full text-white font-bold text-sm flex items-center gap-2 hover:bg-[#06C755] hover:border-[#06C755] transition-all duration-300">
-                                        <span>以LINE開啟</span>
+                                        <span>{t('cases.openLine')}</span>
                                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                         </svg>
@@ -306,12 +308,12 @@ export default function IndustryMatrix() {
 
                 {/* 底部 CTA */}
                 <div className="text-center mt-16">
-                    <p className="text-gray-500 mb-4">想為您的品牌建立這樣的社群嗎？</p>
+                    <p className="text-gray-500 mb-4">{t('cases.sub')}</p>
                     <a
                         href="#team"
                         className="group relative inline-block px-8 py-4 bg-gray-900 text-white font-bold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl"
                     >
-                        <span className="relative z-10">免費諮詢專屬方案</span>
+                        <span className="relative z-10">{t('cases.cta')}</span>
                         <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-emerald-500 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
                     </a>
                 </div>

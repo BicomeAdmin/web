@@ -1,9 +1,11 @@
 import { useCountUp } from '../../hooks/useCountUp';
+import { useMagnetic } from '../../hooks/useMagnetic';
 
 export default function HeroCEO() {
     const brandsCount = useCountUp(300, { duration: 1600 });
     const reachCount = useCountUp(50, { duration: 1800 });
     const satCount = useCountUp(90, { duration: 2000 });
+    const ctaRef = useMagnetic<HTMLAnchorElement>({ strength: 0.3, radius: 140 });
 
     return (
         <section className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-gradient-to-br from-[#0a1f1a] via-[#020617] to-[#020617]">
@@ -64,8 +66,9 @@ export default function HeroCEO() {
                         {/* CTA 按鈕 */}
                         <div className="flex flex-wrap gap-4">
                             <a
+                                ref={ctaRef}
                                 href="#team"
-                                className="group relative px-10 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold rounded-xl overflow-hidden shadow-2xl shadow-emerald-900/20 transition-all duration-300 hover:shadow-emerald-500/40 hover:-translate-y-1"
+                                className="group relative px-10 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold rounded-xl overflow-hidden shadow-2xl shadow-emerald-900/20 transition-shadow duration-300 hover:shadow-emerald-500/40 will-change-transform"
                             >
                                 <span className="relative z-10 flex items-center gap-2">
                                     免費諮詢
